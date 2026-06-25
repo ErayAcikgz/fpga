@@ -1,0 +1,23 @@
+# Gowin generated implementation output
+**/gowin/impl/
+**/gowin/temp/
+**/gowin/log/
+**/gowin/*.log
+**/gowin/*.rpt
+**/gowin/*.html
+**/gowin/*.xml
+**/gowin/*.jou
+**/gowin/*.bak
+
+# Bitstreams and generated programming files
+**/*.fs
+**/*.bin
+**/*.bit
+**/*.jed
+**/*.svf
+
+# Editor/OS
+.vscode/
+*.swp
+*~
+.DS_Store
