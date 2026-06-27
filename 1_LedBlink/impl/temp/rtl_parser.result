@@ -1,0 +1,10 @@
+[
+    {
+        "InstFile": "/home/erayacikgz/Desktop/fpga/1_LedBlink/gowin/src/blink.v",
+        "InstLine": 1,
+        "InstName": "blink",
+        "ModuleFile": "/home/erayacikgz/Desktop/fpga/1_LedBlink/gowin/src/blink.v",
+        "ModuleLine": 1,
+        "ModuleName": "blink"
+    }
+]
