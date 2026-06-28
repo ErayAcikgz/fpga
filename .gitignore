@@ -1,14 +1,25 @@
-# Gowin temporary runtime folders
-**/gowin/temp/
-**/gowin/impl/pnr/temp/
-**/gowin/impl/synthesize/temp/
+# Gowin user/session files
+**/*.gprj.user
+**/*.jou
+**/*.bak
+**/*.tmp
+**/*.lock
 
-# Gowin session/lock/cache files
-**/gowin/*.jou
-**/gowin/*.bak
-**/gowin/*.tmp
-**/gowin/*.lock
-**/gowin/.cache/
+# Gowin generated folders
+**/impl/
+**/temp/
+**/log/
+
+# Gowin generated outputs
+*.fs
+*.bin
+*.bit
+*.jed
+*.svf
+*.rpt
+*.html
+*.xml
+*.log
 
 # Editor/OS noise
 .vscode/
