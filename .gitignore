@@ -1,28 +1,16 @@
-# Gowin user/session files
-**/*.gprj.user
-**/*.jou
-**/*.bak
-**/*.tmp
-**/*.lock
+# Ignore everything by default
+*
 
-# Gowin generated folders
-**/impl/
-**/temp/
-**/log/
+# Allow directories so Git can reach nested src folders
+!*/
 
-# Gowin generated outputs
-*.fs
-*.bin
-*.bit
-*.jed
-*.svf
-*.rpt
-*.html
-*.xml
-*.log
+# Keep source folders only
+!**/src/
+!**/src/**
 
-# Editor/OS noise
-.vscode/
-*.swp
-*~
-.DS_Store
+# Keep root/project documentation
+!README.md
+!**/README.md
+
+# Keep this file
+!.gitignore
