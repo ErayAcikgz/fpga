@@ -1,16 +1,18 @@
 # Ignore everything by default
 *
 
-# Allow directories so Git can reach nested src folders
+# Allow directories
 !*/
 
-# Keep source folders only
+# Keep source and simulation folders
 !**/src/
 !**/src/**
+!**/sim/
+!**/sim/**
 
-# Keep root/project documentation
+# Keep docs
 !README.md
 !**/README.md
 
-# Keep this file
+# Keep gitignore
 !.gitignore
