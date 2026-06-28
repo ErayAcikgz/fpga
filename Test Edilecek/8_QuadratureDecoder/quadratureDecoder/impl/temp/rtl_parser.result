@@ -1,0 +1,10 @@
+[
+    {
+        "InstFile": "/home/erayacikgz/Desktop/fpga/8_QuadratureDecoder/quadratureDecoder/src/quadratureDecoder.sv",
+        "InstLine": 1,
+        "InstName": "quadratureDecoder",
+        "ModuleFile": "/home/erayacikgz/Desktop/fpga/8_QuadratureDecoder/quadratureDecoder/src/quadratureDecoder.sv",
+        "ModuleLine": 1,
+        "ModuleName": "quadratureDecoder"
+    }
+]

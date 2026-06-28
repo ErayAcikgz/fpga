@@ -1,0 +1,309 @@
+//
+//Written by GowinSynthesis
+//Tool Version "V1.9.12.03"
+//Sat Jun 27 22:14:48 2026
+
+//Source file index table:
+//file0 "\/home/erayacikgz/Desktop/fpga/8_QuadratureDecoder/quadratureDecoder/src/quadratureDecoder.sv"
+`timescale 100 ps/100 ps
+module quadratureDecoder (
+  sys_clk,
+  sys_rst_n,
+  quad_a,
+  quad_b,
+  led
+)
+;
+input sys_clk;
+input sys_rst_n;
+input quad_a;
+input quad_b;
+output [4:0] led;
+wire sys_clk_d;
+wire sys_rst_n_d;
+wire quad_a_d;
+wire quad_b_d;
+wire n46_13;
+wire n49_11;
+wire n52_11;
+wire n55_11;
+wire n58_13;
+wire n46_14;
+wire n46_15;
+wire n49_12;
+wire n46_17;
+wire n46_18;
+wire n46_22;
+wire n52_14;
+wire n46_24;
+wire quadA_sync1;
+wire quadB_sync0;
+wire quadB_sync1;
+wire quadA_sync0;
+wire n6_7;
+wire led_d_4_4;
+wire led_d_3_4;
+wire led_d_2_4;
+wire led_d_1_4;
+wire led_d_0_4;
+wire [1:0] quadState;
+wire [1:0] quadStatePrev;
+wire [4:0] positionCounter;
+wire VCC;
+wire GND;
+  IBUF sys_clk_ibuf (
+    .O(sys_clk_d),
+    .I(sys_clk) 
+);
+  IBUF sys_rst_n_ibuf (
+    .O(sys_rst_n_d),
+    .I(sys_rst_n) 
+);
+  IBUF quad_a_ibuf (
+    .O(quad_a_d),
+    .I(quad_a) 
+);
+  IBUF quad_b_ibuf (
+    .O(quad_b_d),
+    .I(quad_b) 
+);
+  OBUF led_0_obuf (
+    .O(led[0]),
+    .I(led_d_0_4) 
+);
+  OBUF led_1_obuf (
+    .O(led[1]),
+    .I(led_d_1_4) 
+);
+  OBUF led_2_obuf (
+    .O(led[2]),
+    .I(led_d_2_4) 
+);
+  OBUF led_3_obuf (
+    .O(led[3]),
+    .I(led_d_3_4) 
+);
+  OBUF led_4_obuf (
+    .O(led[4]),
+    .I(led_d_4_4) 
+);
+  LUT4 n46_s7 (
+    .F(n46_13),
+    .I0(n46_24),
+    .I1(n46_14),
+    .I2(positionCounter[4]),
+    .I3(n46_15) 
+);
+defparam n46_s7.INIT=16'h1284;
+  LUT4 n49_s6 (
+    .F(n49_11),
+    .I0(n49_12),
+    .I1(positionCounter[3]),
+    .I2(n46_14),
+    .I3(n46_15) 
+);
+defparam n49_s6.INIT=16'h0990;
+  LUT4 n52_s6 (
+    .F(n52_11),
+    .I0(n52_14),
+    .I1(positionCounter[2]),
+    .I2(n46_14),
+    .I3(n46_15) 
+);
+defparam n52_s6.INIT=16'h0990;
+  LUT4 n55_s6 (
+    .F(n55_11),
+    .I0(positionCounter[1]),
+    .I1(positionCounter[0]),
+    .I2(n46_14),
+    .I3(n46_15) 
+);
+defparam n55_s6.INIT=16'h0690;
+  LUT2 n58_s8 (
+    .F(n58_13),
+    .I0(positionCounter[0]),
+    .I1(n46_22) 
+);
+defparam n58_s8.INIT=4'h4;
+  LUT2 n46_s8 (
+    .F(n46_14),
+    .I0(quadState[0]),
+    .I1(quadStatePrev[1]) 
+);
+defparam n46_s8.INIT=4'h9;
+  LUT2 n46_s9 (
+    .F(n46_15),
+    .I0(quadState[1]),
+    .I1(quadStatePrev[0]) 
+);
+defparam n46_s9.INIT=4'h9;
+  LUT4 n49_s7 (
+    .F(n49_12),
+    .I0(n46_14),
+    .I1(positionCounter[2]),
+    .I2(positionCounter[1]),
+    .I3(positionCounter[0]) 
+);
+defparam n49_s7.INIT=16'hBFFD;
+  LUT4 n46_s11 (
+    .F(n46_17),
+    .I0(positionCounter[3]),
+    .I1(positionCounter[2]),
+    .I2(positionCounter[1]),
+    .I3(positionCounter[0]) 
+);
+defparam n46_s11.INIT=16'h0001;
+  LUT4 n46_s12 (
+    .F(n46_18),
+    .I0(positionCounter[3]),
+    .I1(positionCounter[2]),
+    .I2(positionCounter[1]),
+    .I3(positionCounter[0]) 
+);
+defparam n46_s12.INIT=16'h8000;
+  LUT4 n46_s14 (
+    .F(n46_22),
+    .I0(quadState[0]),
+    .I1(quadStatePrev[1]),
+    .I2(quadState[1]),
+    .I3(quadStatePrev[0]) 
+);
+defparam n46_s14.INIT=16'h6996;
+  LUT4 n52_s8 (
+    .F(n52_14),
+    .I0(quadState[0]),
+    .I1(quadStatePrev[1]),
+    .I2(positionCounter[1]),
+    .I3(positionCounter[0]) 
+);
+defparam n52_s8.INIT=16'h9FF6;
+  LUT4 n46_s15 (
+    .F(n46_24),
+    .I0(n46_17),
+    .I1(n46_18),
+    .I2(quadState[0]),
+    .I3(quadStatePrev[1]) 
+);
+defparam n46_s15.INIT=16'h5CC5;
+  DFFC quadA_sync1_s0 (
+    .Q(quadA_sync1),
+    .D(quadA_sync0),
+    .CLK(sys_clk_d),
+    .CLEAR(n6_7) 
+);
+  DFFC quadB_sync0_s0 (
+    .Q(quadB_sync0),
+    .D(quad_b_d),
+    .CLK(sys_clk_d),
+    .CLEAR(n6_7) 
+);
+  DFFC quadB_sync1_s0 (
+    .Q(quadB_sync1),
+    .D(quadB_sync0),
+    .CLK(sys_clk_d),
+    .CLEAR(n6_7) 
+);
+  DFFC quadState_1_s0 (
+    .Q(quadState[1]),
+    .D(quadA_sync1),
+    .CLK(sys_clk_d),
+    .CLEAR(n6_7) 
+);
+  DFFC quadState_0_s0 (
+    .Q(quadState[0]),
+    .D(quadB_sync1),
+    .CLK(sys_clk_d),
+    .CLEAR(n6_7) 
+);
+  DFFC quadStatePrev_1_s0 (
+    .Q(quadStatePrev[1]),
+    .D(quadState[1]),
+    .CLK(sys_clk_d),
+    .CLEAR(n6_7) 
+);
+  DFFC quadStatePrev_0_s0 (
+    .Q(quadStatePrev[0]),
+    .D(quadState[0]),
+    .CLK(sys_clk_d),
+    .CLEAR(n6_7) 
+);
+  DFFC quadA_sync0_s0 (
+    .Q(quadA_sync0),
+    .D(quad_a_d),
+    .CLK(sys_clk_d),
+    .CLEAR(n6_7) 
+);
+  DFFCE positionCounter_4_s1 (
+    .Q(positionCounter[4]),
+    .D(n46_13),
+    .CLK(sys_clk_d),
+    .CE(n46_22),
+    .CLEAR(n6_7) 
+);
+defparam positionCounter_4_s1.INIT=1'b0;
+  DFFCE positionCounter_3_s1 (
+    .Q(positionCounter[3]),
+    .D(n49_11),
+    .CLK(sys_clk_d),
+    .CE(n46_22),
+    .CLEAR(n6_7) 
+);
+defparam positionCounter_3_s1.INIT=1'b0;
+  DFFCE positionCounter_2_s1 (
+    .Q(positionCounter[2]),
+    .D(n52_11),
+    .CLK(sys_clk_d),
+    .CE(n46_22),
+    .CLEAR(n6_7) 
+);
+defparam positionCounter_2_s1.INIT=1'b0;
+  DFFCE positionCounter_1_s1 (
+    .Q(positionCounter[1]),
+    .D(n55_11),
+    .CLK(sys_clk_d),
+    .CE(n46_22),
+    .CLEAR(n6_7) 
+);
+defparam positionCounter_1_s1.INIT=1'b0;
+  DFFCE positionCounter_0_s1 (
+    .Q(positionCounter[0]),
+    .D(n58_13),
+    .CLK(sys_clk_d),
+    .CE(n46_22),
+    .CLEAR(n6_7) 
+);
+defparam positionCounter_0_s1.INIT=1'b0;
+  INV n6_s2 (
+    .O(n6_7),
+    .I(sys_rst_n_d) 
+);
+  INV led_d_4_s0 (
+    .O(led_d_4_4),
+    .I(positionCounter[4]) 
+);
+  INV led_d_3_s0 (
+    .O(led_d_3_4),
+    .I(positionCounter[3]) 
+);
+  INV led_d_2_s0 (
+    .O(led_d_2_4),
+    .I(positionCounter[2]) 
+);
+  INV led_d_1_s0 (
+    .O(led_d_1_4),
+    .I(positionCounter[1]) 
+);
+  INV led_d_0_s0 (
+    .O(led_d_0_4),
+    .I(positionCounter[0]) 
+);
+  VCC VCC_cZ (
+    .V(VCC)
+);
+  GND GND_cZ (
+    .G(GND)
+);
+  GSR GSR (
+    .GSRI(VCC) 
+);
+endmodule /* quadratureDecoder */

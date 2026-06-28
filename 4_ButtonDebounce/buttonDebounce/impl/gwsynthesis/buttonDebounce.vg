@@ -1,0 +1,612 @@
+//
+//Written by GowinSynthesis
+//Tool Version "V1.9.12.03"
+//Sat Jun 27 17:29:59 2026
+
+//Source file index table:
+//file0 "\/home/erayacikgz/Desktop/fpga/4_ButtonDebounce/buttonDebounce/src/buttonDebounce.v"
+`timescale 100 ps/100 ps
+module buttonDebounce (
+  sys_clk,
+  button_n,
+  led
+)
+;
+input sys_clk;
+input button_n;
+output led;
+wire sys_clk_d;
+wire button_n_d;
+wire n165_4;
+wire n5_3;
+wire n165_5;
+wire n165_6;
+wire n165_7;
+wire n165_8;
+wire n165_9;
+wire n165_10;
+wire n165_11;
+wire n165_12;
+wire n51_11;
+wire debounceCounter_24_8;
+wire buttonSync1;
+wire buttonLastSample;
+wire led_d;
+wire buttonSync0;
+wire n50_1;
+wire n50_2;
+wire n49_1;
+wire n49_2;
+wire n48_1;
+wire n48_2;
+wire n47_1;
+wire n47_2;
+wire n46_1;
+wire n46_2;
+wire n45_1;
+wire n45_2;
+wire n44_1;
+wire n44_2;
+wire n43_1;
+wire n43_2;
+wire n42_1;
+wire n42_2;
+wire n41_1;
+wire n41_2;
+wire n40_1;
+wire n40_2;
+wire n39_1;
+wire n39_2;
+wire n38_1;
+wire n38_2;
+wire n37_1;
+wire n37_2;
+wire n36_1;
+wire n36_2;
+wire n35_1;
+wire n35_2;
+wire n34_1;
+wire n34_2;
+wire n33_1;
+wire n33_2;
+wire n32_1;
+wire n32_2;
+wire n31_1;
+wire n31_2;
+wire n30_1;
+wire n30_2;
+wire n29_1;
+wire n29_2;
+wire n28_1;
+wire n28_2;
+wire n27_1;
+wire n27_0_COUT;
+wire [24:0] debounceCounter;
+wire VCC;
+wire GND;
+  IBUF sys_clk_ibuf (
+    .O(sys_clk_d),
+    .I(sys_clk) 
+);
+  IBUF button_n_ibuf (
+    .O(button_n_d),
+    .I(button_n) 
+);
+  OBUF led_obuf (
+    .O(led),
+    .I(led_d) 
+);
+  LUT4 n165_s0 (
+    .F(n165_4),
+    .I0(n5_3),
+    .I1(n165_5),
+    .I2(n165_6),
+    .I3(n165_7) 
+);
+defparam n165_s0.INIT=16'h4000;
+  LUT2 n5_s0 (
+    .F(n5_3),
+    .I0(buttonSync1),
+    .I1(buttonLastSample) 
+);
+defparam n5_s0.INIT=4'h6;
+  LUT4 n165_s1 (
+    .F(n165_5),
+    .I0(n165_8),
+    .I1(n165_9),
+    .I2(n165_10),
+    .I3(n165_11) 
+);
+defparam n165_s1.INIT=16'h8000;
+  LUT3 n165_s2 (
+    .F(n165_6),
+    .I0(n165_12),
+    .I1(debounceCounter[0]),
+    .I2(debounceCounter[1]) 
+);
+defparam n165_s2.INIT=8'h80;
+  LUT4 n165_s3 (
+    .F(n165_7),
+    .I0(debounceCounter[21]),
+    .I1(debounceCounter[22]),
+    .I2(debounceCounter[23]),
+    .I3(debounceCounter[24]) 
+);
+defparam n165_s3.INIT=16'h1000;
+  LUT4 n165_s4 (
+    .F(n165_8),
+    .I0(debounceCounter[10]),
+    .I1(debounceCounter[11]),
+    .I2(debounceCounter[12]),
+    .I3(debounceCounter[13]) 
+);
+defparam n165_s4.INIT=16'h8000;
+  LUT4 n165_s5 (
+    .F(n165_9),
+    .I0(debounceCounter[6]),
+    .I1(debounceCounter[8]),
+    .I2(debounceCounter[9]),
+    .I3(debounceCounter[7]) 
+);
+defparam n165_s5.INIT=16'h0100;
+  LUT3 n165_s6 (
+    .F(n165_10),
+    .I0(debounceCounter[18]),
+    .I1(debounceCounter[19]),
+    .I2(debounceCounter[20]) 
+);
+defparam n165_s6.INIT=8'h40;
+  LUT4 n165_s7 (
+    .F(n165_11),
+    .I0(debounceCounter[14]),
+    .I1(debounceCounter[15]),
+    .I2(debounceCounter[16]),
+    .I3(debounceCounter[17]) 
+);
+defparam n165_s7.INIT=16'h8000;
+  LUT4 n165_s8 (
+    .F(n165_12),
+    .I0(debounceCounter[2]),
+    .I1(debounceCounter[3]),
+    .I2(debounceCounter[4]),
+    .I3(debounceCounter[5]) 
+);
+defparam n165_s8.INIT=16'h8000;
+  LUT4 n51_s3 (
+    .F(n51_11),
+    .I0(n165_6),
+    .I1(n165_5),
+    .I2(n165_7),
+    .I3(debounceCounter[0]) 
+);
+defparam n51_s3.INIT=16'h807F;
+  LUT3 debounceCounter_24_s3 (
+    .F(debounceCounter_24_8),
+    .I0(n165_6),
+    .I1(n165_5),
+    .I2(n165_7) 
+);
+defparam debounceCounter_24_s3.INIT=8'h7F;
+  DFF buttonSync1_s0 (
+    .Q(buttonSync1),
+    .D(buttonSync0),
+    .CLK(sys_clk_d) 
+);
+  DFFE buttonLastSample_s0 (
+    .Q(buttonLastSample),
+    .D(buttonSync1),
+    .CLK(sys_clk_d),
+    .CE(n5_3) 
+);
+  DFFRE debounceCounter_24_s0 (
+    .Q(debounceCounter[24]),
+    .D(n27_1),
+    .CLK(sys_clk_d),
+    .CE(debounceCounter_24_8),
+    .RESET(n5_3) 
+);
+  DFFRE debounceCounter_23_s0 (
+    .Q(debounceCounter[23]),
+    .D(n28_1),
+    .CLK(sys_clk_d),
+    .CE(debounceCounter_24_8),
+    .RESET(n5_3) 
+);
+  DFFRE debounceCounter_22_s0 (
+    .Q(debounceCounter[22]),
+    .D(n29_1),
+    .CLK(sys_clk_d),
+    .CE(debounceCounter_24_8),
+    .RESET(n5_3) 
+);
+  DFFRE debounceCounter_21_s0 (
+    .Q(debounceCounter[21]),
+    .D(n30_1),
+    .CLK(sys_clk_d),
+    .CE(debounceCounter_24_8),
+    .RESET(n5_3) 
+);
+  DFFRE debounceCounter_20_s0 (
+    .Q(debounceCounter[20]),
+    .D(n31_1),
+    .CLK(sys_clk_d),
+    .CE(debounceCounter_24_8),
+    .RESET(n5_3) 
+);
+  DFFRE debounceCounter_19_s0 (
+    .Q(debounceCounter[19]),
+    .D(n32_1),
+    .CLK(sys_clk_d),
+    .CE(debounceCounter_24_8),
+    .RESET(n5_3) 
+);
+  DFFRE debounceCounter_18_s0 (
+    .Q(debounceCounter[18]),
+    .D(n33_1),
+    .CLK(sys_clk_d),
+    .CE(debounceCounter_24_8),
+    .RESET(n5_3) 
+);
+  DFFRE debounceCounter_17_s0 (
+    .Q(debounceCounter[17]),
+    .D(n34_1),
+    .CLK(sys_clk_d),
+    .CE(debounceCounter_24_8),
+    .RESET(n5_3) 
+);
+  DFFRE debounceCounter_16_s0 (
+    .Q(debounceCounter[16]),
+    .D(n35_1),
+    .CLK(sys_clk_d),
+    .CE(debounceCounter_24_8),
+    .RESET(n5_3) 
+);
+  DFFRE debounceCounter_15_s0 (
+    .Q(debounceCounter[15]),
+    .D(n36_1),
+    .CLK(sys_clk_d),
+    .CE(debounceCounter_24_8),
+    .RESET(n5_3) 
+);
+  DFFRE debounceCounter_14_s0 (
+    .Q(debounceCounter[14]),
+    .D(n37_1),
+    .CLK(sys_clk_d),
+    .CE(debounceCounter_24_8),
+    .RESET(n5_3) 
+);
+  DFFRE debounceCounter_13_s0 (
+    .Q(debounceCounter[13]),
+    .D(n38_1),
+    .CLK(sys_clk_d),
+    .CE(debounceCounter_24_8),
+    .RESET(n5_3) 
+);
+  DFFRE debounceCounter_12_s0 (
+    .Q(debounceCounter[12]),
+    .D(n39_1),
+    .CLK(sys_clk_d),
+    .CE(debounceCounter_24_8),
+    .RESET(n5_3) 
+);
+  DFFRE debounceCounter_11_s0 (
+    .Q(debounceCounter[11]),
+    .D(n40_1),
+    .CLK(sys_clk_d),
+    .CE(debounceCounter_24_8),
+    .RESET(n5_3) 
+);
+  DFFRE debounceCounter_10_s0 (
+    .Q(debounceCounter[10]),
+    .D(n41_1),
+    .CLK(sys_clk_d),
+    .CE(debounceCounter_24_8),
+    .RESET(n5_3) 
+);
+  DFFRE debounceCounter_9_s0 (
+    .Q(debounceCounter[9]),
+    .D(n42_1),
+    .CLK(sys_clk_d),
+    .CE(debounceCounter_24_8),
+    .RESET(n5_3) 
+);
+  DFFRE debounceCounter_8_s0 (
+    .Q(debounceCounter[8]),
+    .D(n43_1),
+    .CLK(sys_clk_d),
+    .CE(debounceCounter_24_8),
+    .RESET(n5_3) 
+);
+  DFFRE debounceCounter_7_s0 (
+    .Q(debounceCounter[7]),
+    .D(n44_1),
+    .CLK(sys_clk_d),
+    .CE(debounceCounter_24_8),
+    .RESET(n5_3) 
+);
+  DFFRE debounceCounter_6_s0 (
+    .Q(debounceCounter[6]),
+    .D(n45_1),
+    .CLK(sys_clk_d),
+    .CE(debounceCounter_24_8),
+    .RESET(n5_3) 
+);
+  DFFRE debounceCounter_5_s0 (
+    .Q(debounceCounter[5]),
+    .D(n46_1),
+    .CLK(sys_clk_d),
+    .CE(debounceCounter_24_8),
+    .RESET(n5_3) 
+);
+  DFFRE debounceCounter_4_s0 (
+    .Q(debounceCounter[4]),
+    .D(n47_1),
+    .CLK(sys_clk_d),
+    .CE(debounceCounter_24_8),
+    .RESET(n5_3) 
+);
+  DFFRE debounceCounter_3_s0 (
+    .Q(debounceCounter[3]),
+    .D(n48_1),
+    .CLK(sys_clk_d),
+    .CE(debounceCounter_24_8),
+    .RESET(n5_3) 
+);
+  DFFRE debounceCounter_2_s0 (
+    .Q(debounceCounter[2]),
+    .D(n49_1),
+    .CLK(sys_clk_d),
+    .CE(debounceCounter_24_8),
+    .RESET(n5_3) 
+);
+  DFFRE debounceCounter_1_s0 (
+    .Q(debounceCounter[1]),
+    .D(n50_1),
+    .CLK(sys_clk_d),
+    .CE(debounceCounter_24_8),
+    .RESET(n5_3) 
+);
+  DFFE buttonStable_s0 (
+    .Q(led_d),
+    .D(buttonLastSample),
+    .CLK(sys_clk_d),
+    .CE(n165_4) 
+);
+  DFF buttonSync0_s0 (
+    .Q(buttonSync0),
+    .D(button_n_d),
+    .CLK(sys_clk_d) 
+);
+  DFFR debounceCounter_0_s2 (
+    .Q(debounceCounter[0]),
+    .D(n51_11),
+    .CLK(sys_clk_d),
+    .RESET(n5_3) 
+);
+defparam debounceCounter_0_s2.INIT=1'b0;
+  ALU n50_s (
+    .SUM(n50_1),
+    .COUT(n50_2),
+    .I0(debounceCounter[1]),
+    .I1(debounceCounter[0]),
+    .I3(VCC),
+    .CIN(GND) 
+);
+defparam n50_s.ALU_MODE=0;
+  ALU n49_s (
+    .SUM(n49_1),
+    .COUT(n49_2),
+    .I0(debounceCounter[2]),
+    .I1(GND),
+    .I3(VCC),
+    .CIN(n50_2) 
+);
+defparam n49_s.ALU_MODE=0;
+  ALU n48_s (
+    .SUM(n48_1),
+    .COUT(n48_2),
+    .I0(debounceCounter[3]),
+    .I1(GND),
+    .I3(VCC),
+    .CIN(n49_2) 
+);
+defparam n48_s.ALU_MODE=0;
+  ALU n47_s (
+    .SUM(n47_1),
+    .COUT(n47_2),
+    .I0(debounceCounter[4]),
+    .I1(GND),
+    .I3(VCC),
+    .CIN(n48_2) 
+);
+defparam n47_s.ALU_MODE=0;
+  ALU n46_s (
+    .SUM(n46_1),
+    .COUT(n46_2),
+    .I0(debounceCounter[5]),
+    .I1(GND),
+    .I3(VCC),
+    .CIN(n47_2) 
+);
+defparam n46_s.ALU_MODE=0;
+  ALU n45_s (
+    .SUM(n45_1),
+    .COUT(n45_2),
+    .I0(debounceCounter[6]),
+    .I1(GND),
+    .I3(VCC),
+    .CIN(n46_2) 
+);
+defparam n45_s.ALU_MODE=0;
+  ALU n44_s (
+    .SUM(n44_1),
+    .COUT(n44_2),
+    .I0(debounceCounter[7]),
+    .I1(GND),
+    .I3(VCC),
+    .CIN(n45_2) 
+);
+defparam n44_s.ALU_MODE=0;
+  ALU n43_s (
+    .SUM(n43_1),
+    .COUT(n43_2),
+    .I0(debounceCounter[8]),
+    .I1(GND),
+    .I3(VCC),
+    .CIN(n44_2) 
+);
+defparam n43_s.ALU_MODE=0;
+  ALU n42_s (
+    .SUM(n42_1),
+    .COUT(n42_2),
+    .I0(debounceCounter[9]),
+    .I1(GND),
+    .I3(VCC),
+    .CIN(n43_2) 
+);
+defparam n42_s.ALU_MODE=0;
+  ALU n41_s (
+    .SUM(n41_1),
+    .COUT(n41_2),
+    .I0(debounceCounter[10]),
+    .I1(GND),
+    .I3(VCC),
+    .CIN(n42_2) 
+);
+defparam n41_s.ALU_MODE=0;
+  ALU n40_s (
+    .SUM(n40_1),
+    .COUT(n40_2),
+    .I0(debounceCounter[11]),
+    .I1(GND),
+    .I3(VCC),
+    .CIN(n41_2) 
+);
+defparam n40_s.ALU_MODE=0;
+  ALU n39_s (
+    .SUM(n39_1),
+    .COUT(n39_2),
+    .I0(debounceCounter[12]),
+    .I1(GND),
+    .I3(VCC),
+    .CIN(n40_2) 
+);
+defparam n39_s.ALU_MODE=0;
+  ALU n38_s (
+    .SUM(n38_1),
+    .COUT(n38_2),
+    .I0(debounceCounter[13]),
+    .I1(GND),
+    .I3(VCC),
+    .CIN(n39_2) 
+);
+defparam n38_s.ALU_MODE=0;
+  ALU n37_s (
+    .SUM(n37_1),
+    .COUT(n37_2),
+    .I0(debounceCounter[14]),
+    .I1(GND),
+    .I3(VCC),
+    .CIN(n38_2) 
+);
+defparam n37_s.ALU_MODE=0;
+  ALU n36_s (
+    .SUM(n36_1),
+    .COUT(n36_2),
+    .I0(debounceCounter[15]),
+    .I1(GND),
+    .I3(VCC),
+    .CIN(n37_2) 
+);
+defparam n36_s.ALU_MODE=0;
+  ALU n35_s (
+    .SUM(n35_1),
+    .COUT(n35_2),
+    .I0(debounceCounter[16]),
+    .I1(GND),
+    .I3(VCC),
+    .CIN(n36_2) 
+);
+defparam n35_s.ALU_MODE=0;
+  ALU n34_s (
+    .SUM(n34_1),
+    .COUT(n34_2),
+    .I0(debounceCounter[17]),
+    .I1(GND),
+    .I3(VCC),
+    .CIN(n35_2) 
+);
+defparam n34_s.ALU_MODE=0;
+  ALU n33_s (
+    .SUM(n33_1),
+    .COUT(n33_2),
+    .I0(debounceCounter[18]),
+    .I1(GND),
+    .I3(VCC),
+    .CIN(n34_2) 
+);
+defparam n33_s.ALU_MODE=0;
+  ALU n32_s (
+    .SUM(n32_1),
+    .COUT(n32_2),
+    .I0(debounceCounter[19]),
+    .I1(GND),
+    .I3(VCC),
+    .CIN(n33_2) 
+);
+defparam n32_s.ALU_MODE=0;
+  ALU n31_s (
+    .SUM(n31_1),
+    .COUT(n31_2),
+    .I0(debounceCounter[20]),
+    .I1(GND),
+    .I3(VCC),
+    .CIN(n32_2) 
+);
+defparam n31_s.ALU_MODE=0;
+  ALU n30_s (
+    .SUM(n30_1),
+    .COUT(n30_2),
+    .I0(debounceCounter[21]),
+    .I1(GND),
+    .I3(VCC),
+    .CIN(n31_2) 
+);
+defparam n30_s.ALU_MODE=0;
+  ALU n29_s (
+    .SUM(n29_1),
+    .COUT(n29_2),
+    .I0(debounceCounter[22]),
+    .I1(GND),
+    .I3(VCC),
+    .CIN(n30_2) 
+);
+defparam n29_s.ALU_MODE=0;
+  ALU n28_s (
+    .SUM(n28_1),
+    .COUT(n28_2),
+    .I0(debounceCounter[23]),
+    .I1(GND),
+    .I3(VCC),
+    .CIN(n29_2) 
+);
+defparam n28_s.ALU_MODE=0;
+  ALU n27_s (
+    .SUM(n27_1),
+    .COUT(n27_0_COUT),
+    .I0(debounceCounter[24]),
+    .I1(GND),
+    .I3(VCC),
+    .CIN(n28_2) 
+);
+defparam n27_s.ALU_MODE=0;
+  VCC VCC_cZ (
+    .V(VCC)
+);
+  GND GND_cZ (
+    .G(GND)
+);
+  GSR GSR (
+    .GSRI(VCC) 
+);
+endmodule /* buttonDebounce */

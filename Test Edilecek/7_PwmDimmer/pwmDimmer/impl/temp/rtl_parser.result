@@ -1,0 +1,10 @@
+[
+    {
+        "InstFile": "/home/erayacikgz/Desktop/fpga/7_PwmDimmer/pwmDimmer/src/pwmDimmer.sv",
+        "InstLine": 1,
+        "InstName": "pwmDimmer",
+        "ModuleFile": "/home/erayacikgz/Desktop/fpga/7_PwmDimmer/pwmDimmer/src/pwmDimmer.sv",
+        "ModuleLine": 1,
+        "ModuleName": "pwmDimmer"
+    }
+]

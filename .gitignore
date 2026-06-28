@@ -1,22 +1,16 @@
-# Gowin generated implementation output
-**/gowin/impl/
+# Gowin temporary runtime folders
 **/gowin/temp/
-**/gowin/log/
-**/gowin/*.log
-**/gowin/*.rpt
-**/gowin/*.html
-**/gowin/*.xml
+**/gowin/impl/pnr/temp/
+**/gowin/impl/synthesize/temp/
+
+# Gowin session/lock/cache files
 **/gowin/*.jou
 **/gowin/*.bak
+**/gowin/*.tmp
+**/gowin/*.lock
+**/gowin/.cache/
 
-# Bitstreams and generated programming files
-**/*.fs
-**/*.bin
-**/*.bit
-**/*.jed
-**/*.svf
-
-# Editor/OS
+# Editor/OS noise
 .vscode/
 *.swp
 *~

@@ -1,0 +1,10 @@
+[
+    {
+        "InstFile": "/home/erayacikgz/Desktop/fpga/5_EdgeDetector/edgeDetector/src/edgeDetector.v",
+        "InstLine": 1,
+        "InstName": "edgeDetector",
+        "ModuleFile": "/home/erayacikgz/Desktop/fpga/5_EdgeDetector/edgeDetector/src/edgeDetector.v",
+        "ModuleLine": 1,
+        "ModuleName": "edgeDetector"
+    }
+]

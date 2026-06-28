@@ -1,0 +1,28 @@
+[
+    {
+        "InstFile": "/home/erayacikgz/Desktop/fpga/6_ButtonLedCounter/buttonLedCounter/src/buttonLedCounter.v",
+        "InstLine": 1,
+        "InstName": "buttonLedCounter",
+        "ModuleFile": "/home/erayacikgz/Desktop/fpga/6_ButtonLedCounter/buttonLedCounter/src/buttonLedCounter.v",
+        "ModuleLine": 1,
+        "ModuleName": "buttonLedCounter",
+        "SubInsts": [
+            {
+                "InstFile": "/home/erayacikgz/Desktop/fpga/6_ButtonLedCounter/buttonLedCounter/src/buttonLedCounter.v",
+                "InstLine": 12,
+                "InstName": "buttonDebounce_inst",
+                "ModuleFile": "/home/erayacikgz/Desktop/fpga/6_ButtonLedCounter/buttonLedCounter/src/buttonDebounce.v",
+                "ModuleLine": 1,
+                "ModuleName": "buttonDebounce"
+            },
+            {
+                "InstFile": "/home/erayacikgz/Desktop/fpga/6_ButtonLedCounter/buttonLedCounter/src/buttonLedCounter.v",
+                "InstLine": 18,
+                "InstName": "edgeDetector_inst",
+                "ModuleFile": "/home/erayacikgz/Desktop/fpga/6_ButtonLedCounter/buttonLedCounter/src/edgeDetector.v",
+                "ModuleLine": 1,
+                "ModuleName": "edgeDetector"
+            }
+        ]
+    }
+]
