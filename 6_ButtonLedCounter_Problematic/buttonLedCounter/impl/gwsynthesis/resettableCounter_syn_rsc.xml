@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<Module name="buttonLedCounter" Register="6" Alu="5" Lut="6" T_Register="31(6)" T_Alu="23(5)" T_Lut="16(6)">
- <SubModule name="buttonDebounce_inst" Register="23" Alu="18" Lut="10" T_Register="23(23)" T_Alu="18(18)" T_Lut="10(10)"/>
- <SubModule name="edgeDetector_inst" Register="2" T_Register="2(2)"/>
-</Module>
