@@ -13,6 +13,7 @@
 # Keep docs
 !README.md
 !**/README.md
+!SimulationTools.txt
 
 # Keep gitignore
 !.gitignore

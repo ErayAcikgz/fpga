@@ -1,0 +1,3 @@
+iverilog -g2012 -o {outputFile} {verilogFile} {testBenchFile} -> Compiles simulation; -g2012: System Verilog support; -o: Specifies output; outputs .out
+vvp {outputFile} -> Runs simulation; outputs .vcd
+gtkwave {.vcdFile} -> Simulation waveform in GUI

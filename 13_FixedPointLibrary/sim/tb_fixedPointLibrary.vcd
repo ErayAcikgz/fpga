@@ -1,0 +1,107 @@
+$date
+	Mon Jun 29 01:44:18 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module tb_fixedPointLibrary $end
+$var wire 8 ! subResult [7:0] $end
+$var wire 8 " mulResult [7:0] $end
+$var wire 8 # addResult [7:0] $end
+$var reg 8 $ a [7:0] $end
+$var reg 8 % b [7:0] $end
+$scope module addInst $end
+$var wire 8 & a [7:0] $end
+$var wire 8 ' b [7:0] $end
+$var wire 8 ( result [7:0] $end
+$upscope $end
+$scope module mulInst $end
+$var wire 8 ) a [7:0] $end
+$var wire 8 * b [7:0] $end
+$var wire 8 + result [7:0] $end
+$var wire 16 , rawProduct [15:0] $end
+$upscope $end
+$scope module subInst $end
+$var wire 8 - a [7:0] $end
+$var wire 8 . b [7:0] $end
+$var wire 8 / result [7:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+b1000 /
+b1000 .
+b10000 -
+b10000000 ,
+b1000 +
+b1000 *
+b10000 )
+b11000 (
+b1000 '
+b10000 &
+b1000 %
+b10000 $
+b11000 #
+b1000 "
+b1000 !
+$end
+#10000
+b1100 "
+b1100 +
+b100000 #
+b100000 (
+b11000000 ,
+b10000 !
+b10000 /
+b11000 $
+b11000 &
+b11000 )
+b11000 -
+#20000
+b110000 "
+b110000 +
+b111000 #
+b111000 (
+b1100000000 ,
+b11111000 !
+b11111000 /
+b100000 %
+b100000 '
+b100000 *
+b100000 .
+#30000
+b11100000 "
+b11100000 +
+b10000 #
+b10000 (
+b1111111000000000 ,
+b11010000 !
+b11010000 /
+b11110000 $
+b11110000 &
+b11110000 )
+b11110000 -
+#40000
+b100 "
+b100 +
+b1000 %
+b1000 '
+b1000 *
+b1000 .
+b10000 #
+b10000 (
+b1000000 ,
+b0 !
+b0 /
+b1000 $
+b1000 &
+b1000 )
+b1000 -
+#50000
