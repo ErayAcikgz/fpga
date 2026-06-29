@@ -1,0 +1,167 @@
+$date
+	Tue Jun 30 00:33:07 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module tb_saturatingArithmetic $end
+$var wire 8 ! subResult [7:0] $end
+$var wire 8 " mulResult [7:0] $end
+$var wire 8 # addResult [7:0] $end
+$var reg 8 $ a [7:0] $end
+$var reg 8 % b [7:0] $end
+$scope module addInst $end
+$var wire 8 & a [7:0] $end
+$var wire 8 ' b [7:0] $end
+$var wire 9 ( wideSum [8:0] $end
+$var parameter 9 ) MAX_Q4_4 $end
+$var parameter 9 * MIN_Q4_4 $end
+$var reg 8 + result [7:0] $end
+$upscope $end
+$scope module mulInst $end
+$var wire 8 , a [7:0] $end
+$var wire 8 - b [7:0] $end
+$var wire 16 . scaledProduct [15:0] $end
+$var wire 16 / rawProduct [15:0] $end
+$var parameter 16 0 MAX_Q4_4 $end
+$var parameter 16 1 MIN_Q4_4 $end
+$var reg 8 2 result [7:0] $end
+$upscope $end
+$scope module subInst $end
+$var wire 8 3 a [7:0] $end
+$var wire 8 4 b [7:0] $end
+$var wire 9 5 wideDiff [8:0] $end
+$var parameter 9 6 MAX_Q4_4 $end
+$var parameter 9 7 MIN_Q4_4 $end
+$var reg 8 8 result [7:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+b110000000 7
+b1111111 6
+b1111111110000000 1
+b1111111 0
+b110000000 *
+b1111111 )
+$end
+#0
+$dumpvars
+b1010000 8
+b1010000 5
+b100000 4
+b1110000 3
+b1111111 2
+b111000000000 /
+b11100000 .
+b100000 -
+b1110000 ,
+b1111111 +
+b10010000 (
+b100000 '
+b1110000 &
+b100000 %
+b1110000 $
+b1111111 #
+b1111111 "
+b1010000 !
+$end
+#10000
+b10000000 "
+b10000000 2
+b10110000 #
+b10110000 +
+b1111111100100000 .
+b10000000 !
+b10000000 8
+b110110000 (
+b1111001000000000 /
+b101110000 5
+b10010000 $
+b10010000 &
+b10010000 ,
+b10010000 3
+#20000
+b1000000 "
+b1000000 2
+b1000000 #
+b1000000 +
+b1000000 .
+b0 !
+b0 8
+b1000000 (
+b10000000000 /
+b0 5
+b100000 $
+b100000 &
+b100000 ,
+b100000 3
+#30000
+b1111111 "
+b1111111 2
+b1111111 #
+b1111111 +
+b11100000 .
+b1010000 !
+b1010000 8
+b10010000 (
+b111000000000 /
+b1010000 5
+b1110000 $
+b1110000 &
+b1110000 ,
+b1110000 3
+#40000
+b10000000 "
+b10000000 2
+b10110000 #
+b10110000 +
+b1111111100100000 .
+b10000000 !
+b10000000 8
+b110110000 (
+b1111001000000000 /
+b101110000 5
+b10010000 $
+b10010000 &
+b10010000 ,
+b10010000 3
+#50000
+b1000 "
+b1000 2
+b11000 #
+b11000 +
+b1000 .
+b1000 !
+b1000 8
+b1000 %
+b1000 '
+b1000 -
+b1000 4
+b11000 (
+b10000000 /
+b1000 5
+b10000 $
+b10000 &
+b10000 ,
+b10000 3
+#60000
+b1100 "
+b1100 2
+b100000 #
+b100000 +
+b1100 .
+b10000 !
+b10000 8
+b100000 (
+b11000000 /
+b10000 5
+b11000 $
+b11000 &
+b11000 ,
+b11000 3
+#70000
