@@ -1,0 +1,190 @@
+$date
+	Tue Jul  7 17:12:55 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module tb_streamRegister $end
+$var wire 1 ! outputValid $end
+$var wire 8 " outputData [7:0] $end
+$var wire 1 # inputReady $end
+$var reg 8 $ inputData [7:0] $end
+$var reg 1 % inputValid $end
+$var reg 1 & outputReady $end
+$var reg 1 ' sys_clk $end
+$var reg 1 ( sys_rst_n $end
+$scope module dut $end
+$var wire 8 ) inputData [7:0] $end
+$var wire 1 % inputValid $end
+$var wire 1 & outputReady $end
+$var wire 1 ' sys_clk $end
+$var wire 1 ( sys_rst_n $end
+$var wire 1 # inputReady $end
+$var parameter 32 * DATA_WIDTH $end
+$var reg 1 + full $end
+$var reg 8 , outputData [7:0] $end
+$var reg 1 ! outputValid $end
+$upscope $end
+$scope task sendWord $end
+$var reg 8 - dataByte [7:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+b1000 *
+$end
+#0
+$dumpvars
+bx -
+b0 ,
+0+
+b0 )
+0(
+0'
+0&
+0%
+b0 $
+1#
+b0 "
+0!
+$end
+#18518
+1'
+#37036
+0'
+#55554
+1'
+#74072
+0'
+#92590
+1'
+#111108
+0'
+#129626
+1'
+#148144
+0'
+#166662
+1'
+#185180
+0'
+#200000
+b10100001 -
+1&
+1(
+#203698
+1'
+#222216
+1%
+b10100001 $
+b10100001 )
+0'
+#240734
+1!
+0#
+1+
+b10100001 "
+b10100001 ,
+1'
+#259252
+b0 $
+b0 )
+0%
+0'
+#277770
+0!
+1#
+0+
+1'
+#296288
+0'
+#314806
+b10110010 -
+0&
+1'
+#333324
+1%
+b10110010 $
+b10110010 )
+0'
+#351842
+1!
+0#
+1+
+b10110010 "
+b10110010 ,
+1'
+#370360
+b0 $
+b0 )
+0%
+0'
+#388878
+1'
+#407396
+0'
+#425914
+1'
+#444432
+0'
+#462950
+1'
+#481468
+0'
+#499986
+0!
+1#
+0+
+1&
+1'
+#518504
+0'
+#537022
+1'
+#555540
+0'
+#574058
+1'
+#592576
+0'
+#611094
+b11000011 -
+1'
+#629612
+1%
+b11000011 $
+b11000011 )
+0'
+#648130
+1!
+0#
+1+
+b11000011 "
+b11000011 ,
+1'
+#666648
+b0 $
+b0 )
+0%
+0'
+#685166
+0!
+1#
+0+
+1'
+#703684
+0'
+#722202
+1'
+#740720
+0'
+#759238
+1'
+#777756
+0'
+#796274
+1'
