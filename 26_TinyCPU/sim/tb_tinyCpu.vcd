@@ -1,0 +1,334 @@
+$date
+	Sat Jul 11 00:34:03 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module tb_tinyCpu $end
+$var wire 8 ! programCounter [7:0] $end
+$var wire 1 " halted $end
+$var wire 8 # debugR7 [7:0] $end
+$var wire 8 $ debugR6 [7:0] $end
+$var wire 8 % debugR5 [7:0] $end
+$var wire 8 & debugR4 [7:0] $end
+$var wire 8 ' debugR3 [7:0] $end
+$var wire 8 ( debugR2 [7:0] $end
+$var wire 8 ) debugR1 [7:0] $end
+$var wire 8 * debugR0 [7:0] $end
+$var wire 8 + debugMem10 [7:0] $end
+$var wire 16 , currentInstruction [15:0] $end
+$var parameter 4 - OP_ADD $end
+$var parameter 4 . OP_ADDI $end
+$var parameter 4 / OP_AND $end
+$var parameter 4 0 OP_HALT $end
+$var parameter 4 1 OP_JUMP $end
+$var parameter 4 2 OP_LOAD $end
+$var parameter 4 3 OP_NOP $end
+$var parameter 4 4 OP_OR $end
+$var parameter 4 5 OP_STORE $end
+$var parameter 4 6 OP_SUB $end
+$var reg 1 7 sys_clk $end
+$var reg 1 8 sys_rst_n $end
+$scope function encodeAddi $end
+$upscope $end
+$scope function encodeHalt $end
+$upscope $end
+$scope function encodeJump $end
+$upscope $end
+$scope function encodeLoad $end
+$upscope $end
+$scope function encodeR $end
+$upscope $end
+$scope function encodeStore $end
+$upscope $end
+$scope module dut $end
+$var wire 16 9 currentInstruction [15:0] $end
+$var wire 8 : debugMem10 [7:0] $end
+$var wire 8 ; debugR0 [7:0] $end
+$var wire 8 < debugR1 [7:0] $end
+$var wire 8 = debugR2 [7:0] $end
+$var wire 8 > debugR3 [7:0] $end
+$var wire 8 ? debugR4 [7:0] $end
+$var wire 8 @ debugR5 [7:0] $end
+$var wire 8 A debugR6 [7:0] $end
+$var wire 8 B debugR7 [7:0] $end
+$var wire 1 7 sys_clk $end
+$var wire 1 8 sys_rst_n $end
+$var wire 6 C storeAddress6 [5:0] $end
+$var wire 8 D signExtendedImmediate [7:0] $end
+$var wire 3 E rs2 [2:0] $end
+$var wire 3 F rs1 [2:0] $end
+$var wire 3 G rd [2:0] $end
+$var wire 4 H opcode [3:0] $end
+$var wire 6 I immediate6 [5:0] $end
+$var wire 8 J address8 [7:0] $end
+$var parameter 4 K OP_ADD $end
+$var parameter 4 L OP_ADDI $end
+$var parameter 4 M OP_AND $end
+$var parameter 4 N OP_HALT $end
+$var parameter 4 O OP_JUMP $end
+$var parameter 4 P OP_LOAD $end
+$var parameter 4 Q OP_NOP $end
+$var parameter 4 R OP_OR $end
+$var parameter 4 S OP_STORE $end
+$var parameter 4 T OP_SUB $end
+$var reg 1 " halted $end
+$var reg 8 U programCounter [7:0] $end
+$var integer 32 V i [31:0] $end
+$upscope $end
+$scope task checkRegister $end
+$var reg 8 W expectedValue [7:0] $end
+$var reg 3 X regIndex [2:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+b10 T
+b111 S
+b100 R
+b0 Q
+b110 P
+b1000 O
+b1111 N
+b11 M
+b101 L
+b1 K
+b10 6
+b111 5
+b100 4
+b0 3
+b110 2
+b1000 1
+b1111 0
+b11 /
+b101 .
+b1 -
+$end
+#0
+$dumpvars
+bx X
+bx W
+b100000000 V
+b0 U
+b101 J
+b101 I
+b101 H
+b1 G
+b0 F
+b0 E
+b101 D
+b101 C
+b0 B
+b0 A
+b0 @
+b0 ?
+b0 >
+b0 =
+b0 <
+b0 ;
+b0 :
+b101001000000101 9
+08
+07
+b101001000000101 ,
+b0 +
+b0 *
+b0 )
+b0 (
+b0 '
+b0 &
+b0 %
+b0 $
+b0 #
+0"
+b0 !
+$end
+#18518
+b100000000 V
+17
+#37036
+07
+#55554
+b100000000 V
+17
+#74072
+07
+#92590
+b100000000 V
+17
+#111108
+07
+#129626
+b100000000 V
+17
+#148144
+07
+#166662
+b100000000 V
+17
+#185180
+07
+#200000
+18
+#203698
+b111 C
+b10 G
+b111 D
+b111 I
+b111 J
+b101010000000111 ,
+b101010000000111 9
+b1 !
+b1 U
+b101 )
+b101 <
+17
+#222216
+07
+#240734
+b10000 C
+b1 H
+b11 G
+b1 F
+b10 E
+b10000 D
+b10000 I
+b1010000 J
+b1011001010000 ,
+b1011001010000 9
+b10 !
+b10 U
+b111 (
+b111 =
+17
+#259252
+07
+#277770
+b111 H
+b0 G
+b11 F
+b11010000 J
+b111000011010000 ,
+b111000011010000 9
+b11 !
+b11 U
+b1100 '
+b1100 >
+17
+#296288
+07
+#314806
+b110 H
+b100 G
+b0 F
+b10000 J
+b110100000010000 ,
+b110100000010000 9
+b100 !
+b100 U
+b1100 +
+b1100 :
+17
+#333324
+07
+#351842
+b1000 C
+b10 H
+b101 G
+b100 F
+b1 E
+b1000 D
+b1000 I
+b1000 J
+b10101100001000 ,
+b10101100001000 9
+b101 !
+b101 U
+b1100 &
+b1100 ?
+17
+#370360
+07
+#388878
+b10000 C
+b11 H
+b110 G
+b101 F
+b10 E
+b10000 D
+b10000 I
+b1010000 J
+b11110101010000 ,
+b11110101010000 9
+b110 !
+b110 U
+b111 %
+b111 @
+17
+#407396
+07
+#425914
+b1000 C
+b100 H
+b111 G
+b110 F
+b1 E
+b1000 D
+b1000 I
+b10001000 J
+b100111110001000 ,
+b100111110001000 9
+b111 !
+b111 U
+b111 $
+b111 A
+17
+#444432
+07
+#462950
+b0 C
+b1111 H
+b0 G
+b0 F
+b0 E
+b0 D
+b0 I
+b0 J
+b1111000000000000 ,
+b1111000000000000 9
+b1000 !
+b1000 U
+b111 #
+b111 B
+17
+#481468
+07
+#499986
+1"
+17
+#518504
+07
+#537022
+b111 W
+b111 X
+17
+#555540
+07
+#574058
+17
+#592576
+07
+#611094
+17
+#629612
+07
+#648130
+17
+#666648
+07
+#685166
+17

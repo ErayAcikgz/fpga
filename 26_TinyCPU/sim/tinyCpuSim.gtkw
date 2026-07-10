@@ -1,0 +1,48 @@
+[*]
+[*] GTKWave Analyzer v3.3.116 (w)1999-2023 BSI
+[*] Fri Jul 10 21:35:38 2026
+[*]
+[dumpfile] "/home/erayacikgz/Desktop/fpga/26_TinyCPU/sim/tb_tinyCpu.vcd"
+[dumpfile_mtime] "Fri Jul 10 21:34:03 2026"
+[dumpfile_size] 4268
+[savefile] "/home/erayacikgz/Desktop/fpga/26_TinyCPU/sim/tinyCpuSim.gtkw"
+[timestart] 0
+[size] 1920 993
+[pos] -73 -73
+*-16.654913 669600 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] tb_tinyCpu.
+[sst_width] 276
+[signals_width] 377
+[sst_expanded] 1
+[sst_vpaned_height] 293
+@22
+tb_tinyCpu.programCounter[7:0]
+tb_tinyCpu.currentInstruction[15:0]
+@28
+tb_tinyCpu.halted
+@200
+-
+@22
+tb_tinyCpu.dut.opcode[3:0]
+@28
+tb_tinyCpu.dut.rd[2:0]
+tb_tinyCpu.dut.rs1[2:0]
+tb_tinyCpu.dut.rs2[2:0]
+@22
+tb_tinyCpu.dut.address8[7:0]
+tb_tinyCpu.dut.storeAddress6[5:0]
+tb_tinyCpu.dut.signExtendedImmediate[7:0]
+@200
+-
+@22
+tb_tinyCpu.dut.debugR0[7:0]
+tb_tinyCpu.dut.debugR1[7:0]
+tb_tinyCpu.dut.debugR2[7:0]
+tb_tinyCpu.dut.debugR3[7:0]
+tb_tinyCpu.dut.debugR4[7:0]
+tb_tinyCpu.dut.debugR5[7:0]
+tb_tinyCpu.dut.debugR6[7:0]
+tb_tinyCpu.dut.debugR7[7:0]
+tb_tinyCpu.dut.debugMem10[7:0]
+[pattern_trace] 1
+[pattern_trace] 0
