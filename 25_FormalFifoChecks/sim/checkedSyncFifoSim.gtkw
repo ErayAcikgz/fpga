@@ -1,0 +1,52 @@
+[*]
+[*] GTKWave Analyzer v3.3.116 (w)1999-2023 BSI
+[*] Fri Jul 10 14:44:46 2026
+[*]
+[dumpfile] "/home/erayacikgz/Desktop/fpga/25_FormalFifoChecks/sim/tb_checkedSyncFifo.vcd"
+[dumpfile_mtime] "Fri Jul 10 14:28:54 2026"
+[dumpfile_size] 5506
+[savefile] "/home/erayacikgz/Desktop/fpga/25_FormalFifoChecks/sim/checkedSyncFifoSim.gtkw"
+[timestart] 65000
+[size] 1920 993
+[pos] -73 -73
+*-18.520937 2370304 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] tb_checkedSyncFifo.
+[sst_width] 276
+[signals_width] 249
+[sst_expanded] 1
+[sst_vpaned_height] 293
+@28
+tb_checkedSyncFifo.writeEnable
+@22
+tb_checkedSyncFifo.writeData[7:0]
+@28
+tb_checkedSyncFifo.full
+@200
+-
+@28
+tb_checkedSyncFifo.readEnable
+@22
+tb_checkedSyncFifo.readData[7:0]
+@28
+tb_checkedSyncFifo.empty
+@200
+-
+@22
+tb_checkedSyncFifo.count[4:0]
+@200
+-
+@28
+tb_checkedSyncFifo.dut.writeValid
+tb_checkedSyncFifo.dut.readValid
+@22
+tb_checkedSyncFifo.dut.writePointer[3:0]
+tb_checkedSyncFifo.dut.readPointer[3:0]
+@200
+-
+@22
+tb_checkedSyncFifo.dut.previousCount[4:0]
+@28
+tb_checkedSyncFifo.dut.previousFull
+tb_checkedSyncFifo.dut.previousEmpty
+[pattern_trace] 1
+[pattern_trace] 0

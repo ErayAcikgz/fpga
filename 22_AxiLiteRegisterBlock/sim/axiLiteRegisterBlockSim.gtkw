@@ -1,0 +1,38 @@
+[*]
+[*] GTKWave Analyzer v3.3.116 (w)1999-2023 BSI
+[*] Fri Jul 10 12:09:56 2026
+[*]
+[dumpfile] "/home/erayacikgz/Desktop/fpga/22_AxiLiteRegisterBlock/sim/tb_axiLiteRegisterBlock.vcd"
+[dumpfile_mtime] "Fri Jul 10 12:04:33 2026"
+[dumpfile_size] 3189
+[savefile] "/home/erayacikgz/Desktop/fpga/22_AxiLiteRegisterBlock/sim/axiLiteRegisterBlockSim.gtkw"
+[timestart] 90000
+[size] 1920 993
+[pos] -91 -91
+*-17.183746 923700 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] tb_axiLiteRegisterBlock.
+[sst_width] 276
+[signals_width] 325
+[sst_expanded] 1
+[sst_vpaned_height] 293
+@28
+tb_axiLiteRegisterBlock.writeEnable
+@22
+tb_axiLiteRegisterBlock.writeAddress[7:0]
+tb_axiLiteRegisterBlock.writeData[31:0]
+@28
+tb_axiLiteRegisterBlock.readEnable
+@22
+tb_axiLiteRegisterBlock.readAddress[7:0]
+tb_axiLiteRegisterBlock.readData[31:0]
+tb_axiLiteRegisterBlock.dut.controlReg[31:0]
+tb_axiLiteRegisterBlock.dut.inputAReg[31:0]
+tb_axiLiteRegisterBlock.dut.inputBReg[31:0]
+tb_axiLiteRegisterBlock.dut.resultReg[31:0]
+tb_axiLiteRegisterBlock.dut.statusReg[31:0]
+@28
+tb_axiLiteRegisterBlock.dut.done
+@29
+tb_axiLiteRegisterBlock.dut.busy
+[pattern_trace] 1
+[pattern_trace] 0

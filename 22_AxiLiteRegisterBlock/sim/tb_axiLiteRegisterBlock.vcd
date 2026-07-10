@@ -1,0 +1,334 @@
+$date
+	Fri Jul 10 15:04:33 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module tb_axiLiteRegisterBlock $end
+$var wire 32 ! readData [31:0] $end
+$var wire 1 " done $end
+$var wire 1 # busy $end
+$var parameter 8 $ ADDR_CONTROL $end
+$var parameter 8 % ADDR_INPUT_A $end
+$var parameter 8 & ADDR_INPUT_B $end
+$var parameter 8 ' ADDR_RESULT $end
+$var parameter 8 ( ADDR_STATUS $end
+$var reg 8 ) readAddress [7:0] $end
+$var reg 1 * readEnable $end
+$var reg 1 + sys_clk $end
+$var reg 1 , sys_rst_n $end
+$var reg 8 - writeAddress [7:0] $end
+$var reg 32 . writeData [31:0] $end
+$var reg 1 / writeEnable $end
+$scope module dut $end
+$var wire 8 0 readAddress [7:0] $end
+$var wire 1 * readEnable $end
+$var wire 1 1 startPulse $end
+$var wire 1 + sys_clk $end
+$var wire 1 , sys_rst_n $end
+$var wire 8 2 writeAddress [7:0] $end
+$var wire 32 3 writeData [31:0] $end
+$var wire 1 / writeEnable $end
+$var wire 1 " done $end
+$var wire 1 # busy $end
+$var parameter 8 4 ADDR_CONTROL $end
+$var parameter 8 5 ADDR_INPUT_A $end
+$var parameter 8 6 ADDR_INPUT_B $end
+$var parameter 8 7 ADDR_RESULT $end
+$var parameter 8 8 ADDR_STATUS $end
+$var reg 32 9 controlReg [31:0] $end
+$var reg 32 : inputAReg [31:0] $end
+$var reg 32 ; inputBReg [31:0] $end
+$var reg 32 < readData [31:0] $end
+$var reg 32 = resultReg [31:0] $end
+$var reg 32 > statusReg [31:0] $end
+$upscope $end
+$scope task busRead $end
+$var reg 8 ? address [7:0] $end
+$upscope $end
+$scope task busWrite $end
+$var reg 8 @ address [7:0] $end
+$var reg 32 A data [31:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+b10000 8
+b1100 7
+b1000 6
+b100 5
+b0 4
+b10000 (
+b1100 '
+b1000 &
+b100 %
+b0 $
+$end
+#0
+$dumpvars
+bx A
+bx @
+bx ?
+b0 >
+b0 =
+b0 <
+b0 ;
+b0 :
+b0 9
+b0 3
+b0 2
+01
+b0 0
+0/
+b0 .
+b0 -
+0,
+0+
+0*
+b0 )
+0#
+0"
+b0 !
+$end
+#18518
+1+
+#37036
+0+
+#55554
+1+
+#74072
+0+
+#92590
+1+
+#111108
+0+
+#129626
+1+
+#148144
+0+
+#166662
+1+
+#185180
+0+
+#200000
+b1111 A
+b100 @
+1,
+#203698
+1+
+#222216
+1/
+b1111 .
+b1111 3
+b100 -
+b100 2
+0+
+#240734
+b1111 :
+1+
+#259252
+b11011 A
+b1000 @
+b0 .
+b0 3
+b0 -
+b0 2
+0/
+0+
+#277770
+1+
+#296288
+1/
+b11011 .
+b11011 3
+b1000 -
+b1000 2
+0+
+#314806
+b11011 ;
+1+
+#333324
+b1 A
+b0 @
+b0 .
+b0 3
+b0 -
+b0 2
+0/
+0+
+#351842
+1+
+#370360
+11
+1/
+b1 .
+b1 3
+0+
+#388878
+1"
+b101010 =
+b1 >
+b1 9
+1+
+#407396
+01
+b1100 ?
+b0 .
+b0 3
+0/
+0+
+#425914
+1+
+#444432
+b101010 !
+b101010 <
+1*
+b1100 )
+b1100 0
+0+
+#462950
+1+
+#481468
+b0 !
+b0 <
+b10000 ?
+b0 )
+b0 0
+0*
+0+
+#499986
+1+
+#518504
+b1 !
+b1 <
+1*
+b10000 )
+b10000 0
+0+
+#537022
+1+
+#555540
+b0 !
+b0 <
+b1100100 A
+b100 @
+b0 )
+b0 0
+0*
+0+
+#574058
+1+
+#592576
+1/
+b1100100 .
+b1100100 3
+b100 -
+b100 2
+0+
+#611094
+b1100100 :
+1+
+#629612
+b10111 A
+b1000 @
+b0 .
+b0 3
+b0 -
+b0 2
+0/
+0+
+#648130
+1+
+#666648
+1/
+b10111 .
+b10111 3
+b1000 -
+b1000 2
+0+
+#685166
+b10111 ;
+1+
+#703684
+b1 A
+b0 @
+b0 .
+b0 3
+b0 -
+b0 2
+0/
+0+
+#722202
+1+
+#740720
+11
+1/
+b1 .
+b1 3
+0+
+#759238
+b1111011 =
+b1 >
+1+
+#777756
+01
+b1100 ?
+b0 .
+b0 3
+0/
+0+
+#796274
+1+
+#814792
+b1111011 !
+b1111011 <
+1*
+b1100 )
+b1100 0
+0+
+#833310
+1+
+#851828
+b0 !
+b0 <
+b10000 ?
+b0 )
+b0 0
+0*
+0+
+#870346
+1+
+#888864
+b1 !
+b1 <
+1*
+b10000 )
+b10000 0
+0+
+#907382
+1+
+#925900
+b0 !
+b0 <
+b0 )
+b0 0
+0*
+0+
+#944418
+1+
+#962936
+0+
+#981454
+1+
+#999972
+0+
+#1018490
+1+
+#1037008
+0+
+#1055526
+1+

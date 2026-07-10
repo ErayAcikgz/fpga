@@ -1,0 +1,42 @@
+[*]
+[*] GTKWave Analyzer v3.3.116 (w)1999-2023 BSI
+[*] Fri Jul 10 12:37:07 2026
+[*]
+[dumpfile] "/home/erayacikgz/Desktop/fpga/23_MatrixMultiply/sim/tb_matrixMultiply.vcd"
+[dumpfile_mtime] "Fri Jul 10 12:35:05 2026"
+[dumpfile_size] 6380
+[savefile] "/home/erayacikgz/Desktop/fpga/23_MatrixMultiply/sim/matrixMultiplySim.gtkw"
+[timestart] 0
+[size] 1920 993
+[pos] -865 -51
+*-18.000706 351842 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] tb_matrixMultiply.
+[sst_width] 276
+[signals_width] 265
+[sst_expanded] 1
+[sst_vpaned_height] 293
+@28
+tb_matrixMultiply.start
+tb_matrixMultiply.busy
+@29
+tb_matrixMultiply.done
+@200
+-
+@28
+tb_matrixMultiply.dut.state[1:0]
+tb_matrixMultiply.dut.row[1:0]
+tb_matrixMultiply.dut.col[1:0]
+@22
+tb_matrixMultiply.dut.currentInput[7:0]
+tb_matrixMultiply.dut.currentWeight[7:0]
+tb_matrixMultiply.dut.rawProduct[15:0]
+tb_matrixMultiply.dut.scaledProduct[15:0]
+@200
+-
+@22
+tb_matrixMultiply.y0[15:0]
+tb_matrixMultiply.y1[15:0]
+tb_matrixMultiply.y2[15:0]
+tb_matrixMultiply.y3[15:0]
+[pattern_trace] 1
+[pattern_trace] 0
