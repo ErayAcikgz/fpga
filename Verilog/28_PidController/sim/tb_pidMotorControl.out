@@ -1,0 +1,292 @@
+#! /usr/bin/vvp
+:ivl_version "12.0 (stable)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision - 12;
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/system.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/vhdl_sys.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/vhdl_textio.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/v2005_math.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/va_math.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/v2009.vpi";
+S_0x634959b2de50 .scope package, "$unit" "$unit" 2 1;
+ .timescale 0 0;
+S_0x634959b2a240 .scope module, "tb_pidMotorControl" "tb_pidMotorControl" 3 3;
+ .timescale -9 -12;
+v0x634959b677d0_0 .net/s "controlOutput", 15 0, v0x634959b66450_0;  1 drivers
+v0x634959b678b0_0 .var/s "kd", 15 0;
+v0x634959b67950_0 .var/s "ki", 15 0;
+v0x634959b679f0_0 .var/s "kp", 15 0;
+v0x634959b67a90_0 .var/s "measuredValue", 15 0;
+v0x634959b67b30_0 .net "outputValid", 0 0, v0x634959b66ed0_0;  1 drivers
+v0x634959b67c00_0 .var "sampleEnable", 0 0;
+v0x634959b67cd0_0 .var/s "setpoint", 15 0;
+v0x634959b67da0_0 .var "sys_clk", 0 0;
+v0x634959b67e70_0 .var "sys_rst_n", 0 0;
+S_0x634959b407f0 .scope task, "applySample" "applySample" 3 42, 3 42 0, S_0x634959b2a240;
+ .timescale -9 -12;
+v0x634959b32aa0_0 .var/s "newMeasuredValue", 15 0;
+E_0x634959b36980 .event posedge, v0x634959b674b0_0;
+E_0x634959afd910 .event anyedge, v0x634959b66ed0_0;
+E_0x634959afdc10 .event negedge, v0x634959b674b0_0;
+TD_tb_pidMotorControl.applySample ;
+    %wait E_0x634959afdc10;
+    %load/vec4 v0x634959b32aa0_0;
+    %store/vec4 v0x634959b67a90_0, 0, 16;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x634959b67c00_0, 0, 1;
+    %wait E_0x634959afdc10;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x634959b67c00_0, 0, 1;
+T_0.0 ;
+    %load/vec4 v0x634959b67b30_0;
+    %pushi/vec4 1, 0, 1;
+    %cmp/e;
+    %flag_get/vec4 4;
+    %cmpi/ne 1, 0, 1;
+    %jmp/0xz T_0.1, 6;
+    %wait E_0x634959afd910;
+    %jmp T_0.0;
+T_0.1 ;
+    %wait E_0x634959b36980;
+    %vpi_call/w 3 54 "$display", "setpoint=%0d measured=%0d error=%0d output=%0d hex=%04h", v0x634959b67cd0_0, v0x634959b67a90_0, v0x634959b66530_0, v0x634959b677d0_0, v0x634959b677d0_0 {0 0 0};
+    %end;
+S_0x634959b65400 .scope module, "dut" "fpgaPidMotorControl" 3 20, 4 1 0, S_0x634959b2a240;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "sys_clk";
+    .port_info 1 /INPUT 1 "sys_rst_n";
+    .port_info 2 /INPUT 1 "sampleEnable";
+    .port_info 3 /INPUT 16 "setpoint";
+    .port_info 4 /INPUT 16 "measuredValue";
+    .port_info 5 /INPUT 16 "kp";
+    .port_info 6 /INPUT 16 "ki";
+    .port_info 7 /INPUT 16 "kd";
+    .port_info 8 /OUTPUT 16 "controlOutput";
+    .port_info 9 /OUTPUT 1 "outputValid";
+v0x634959b65a60_0 .net/s *"_ivl_10", 47 0, L_0x634959b68480;  1 drivers
+v0x634959b65b60_0 .net/s *"_ivl_12", 47 0, L_0x634959b68560;  1 drivers
+v0x634959b65c40_0 .net/s *"_ivl_16", 31 0, L_0x634959b687e0;  1 drivers
+v0x634959b65d00_0 .net/s *"_ivl_18", 31 0, L_0x634959b688d0;  1 drivers
+v0x634959b65de0_0 .net *"_ivl_24", 23 0, L_0x634959b68b10;  1 drivers
+v0x634959b65f10_0 .net *"_ivl_26", 47 0, L_0x634959b68ed0;  1 drivers
+v0x634959b65ff0_0 .net *"_ivl_28", 39 0, L_0x634959b68d60;  1 drivers
+v0x634959b660d0_0 .net *"_ivl_34", 23 0, L_0x634959b69140;  1 drivers
+v0x634959b661b0_0 .net/s *"_ivl_36", 31 0, L_0x634959b693c0;  1 drivers
+v0x634959b66290_0 .net/s *"_ivl_4", 31 0, L_0x634959b68150;  1 drivers
+v0x634959b66370_0 .net/s *"_ivl_6", 31 0, L_0x634959b681f0;  1 drivers
+v0x634959b66450_0 .var/s "controlOutput", 15 0;
+v0x634959b66530_0 .net/s "currentError", 15 0, L_0x634959b67f40;  1 drivers
+v0x634959b66610_0 .net/s "derivativeProduct", 31 0, L_0x634959b68a20;  1 drivers
+v0x634959b666f0_0 .net/s "derivativeTerm", 31 0, L_0x634959b69230;  1 drivers
+v0x634959b667d0_0 .net/s "errorDelta", 15 0, L_0x634959b68060;  1 drivers
+v0x634959b668b0_0 .var/s "integralAccumulator", 31 0;
+v0x634959b66990_0 .net/s "integralProduct", 47 0, L_0x634959b68650;  1 drivers
+v0x634959b66a70_0 .net/s "integralTerm", 31 0, L_0x634959b68fc0;  1 drivers
+v0x634959b66b50_0 .net/s "kd", 15 0, v0x634959b678b0_0;  1 drivers
+v0x634959b66c30_0 .net/s "ki", 15 0, v0x634959b67950_0;  1 drivers
+v0x634959b66d10_0 .net/s "kp", 15 0, v0x634959b679f0_0;  1 drivers
+v0x634959b66df0_0 .net/s "measuredValue", 15 0, v0x634959b67a90_0;  1 drivers
+v0x634959b66ed0_0 .var "outputValid", 0 0;
+v0x634959b66f90_0 .net/s "pidSum", 31 0, L_0x634959b69500;  1 drivers
+v0x634959b67070_0 .var/s "previousError", 15 0;
+v0x634959b67150_0 .net/s "proportionalProduct", 31 0, L_0x634959b68340;  1 drivers
+v0x634959b67230_0 .net/s "proportionalTerm", 31 0, L_0x634959b68c70;  1 drivers
+v0x634959b67310_0 .net "sampleEnable", 0 0, v0x634959b67c00_0;  1 drivers
+v0x634959b673d0_0 .net/s "setpoint", 15 0, v0x634959b67cd0_0;  1 drivers
+v0x634959b674b0_0 .net "sys_clk", 0 0, v0x634959b67da0_0;  1 drivers
+v0x634959b67570_0 .net "sys_rst_n", 0 0, v0x634959b67e70_0;  1 drivers
+E_0x634959b3ca70/0 .event negedge, v0x634959b67570_0;
+E_0x634959b3ca70/1 .event posedge, v0x634959b674b0_0;
+E_0x634959b3ca70 .event/or E_0x634959b3ca70/0, E_0x634959b3ca70/1;
+L_0x634959b67f40 .arith/sub 16, v0x634959b67cd0_0, v0x634959b67a90_0;
+L_0x634959b68060 .arith/sub 16, L_0x634959b67f40, v0x634959b67070_0;
+L_0x634959b68150 .extend/s 32, L_0x634959b67f40;
+L_0x634959b681f0 .extend/s 32, v0x634959b679f0_0;
+L_0x634959b68340 .arith/mult 32, L_0x634959b68150, L_0x634959b681f0;
+L_0x634959b68480 .extend/s 48, v0x634959b668b0_0;
+L_0x634959b68560 .extend/s 48, v0x634959b67950_0;
+L_0x634959b68650 .arith/mult 48, L_0x634959b68480, L_0x634959b68560;
+L_0x634959b687e0 .extend/s 32, L_0x634959b68060;
+L_0x634959b688d0 .extend/s 32, v0x634959b678b0_0;
+L_0x634959b68a20 .arith/mult 32, L_0x634959b687e0, L_0x634959b688d0;
+L_0x634959b68b10 .part L_0x634959b68340, 8, 24;
+L_0x634959b68c70 .extend/s 32, L_0x634959b68b10;
+L_0x634959b68d60 .part L_0x634959b68650, 8, 40;
+L_0x634959b68ed0 .extend/s 48, L_0x634959b68d60;
+L_0x634959b68fc0 .part L_0x634959b68ed0, 0, 32;
+L_0x634959b69140 .part L_0x634959b68a20, 8, 24;
+L_0x634959b69230 .extend/s 32, L_0x634959b69140;
+L_0x634959b693c0 .arith/sum 32, L_0x634959b68c70, L_0x634959b68fc0;
+L_0x634959b69500 .arith/sum 32, L_0x634959b693c0, L_0x634959b69230;
+S_0x634959b65720 .scope autofunction.vec4.u16, "saturate16" "saturate16" 4 54, 4 54 0, S_0x634959b65400;
+ .timescale 0 0;
+; Variable saturate16 is vec4 return value of scope S_0x634959b65720
+v0x634959b65980_0 .var/s "value", 31 0;
+TD_tb_pidMotorControl.dut.saturate16 ;
+    %load/vec4 v0x634959b65980_0;
+    %cmpi/s 32767, 0, 32;
+    %flag_or 5, 4; GT is !LE
+    %flag_inv 5;
+    %jmp/0xz  T_1.2, 5;
+    %pushi/vec4 32767, 0, 16;
+    %ret/vec4 0, 0, 16;  Assign to saturate16 (store_vec4_to_lval)
+    %jmp T_1.3;
+T_1.2 ;
+    %load/vec4 v0x634959b65980_0;
+    %cmpi/s 4294934528, 0, 32;
+    %jmp/0xz  T_1.4, 5;
+    %pushi/vec4 32768, 0, 16;
+    %ret/vec4 0, 0, 16;  Assign to saturate16 (store_vec4_to_lval)
+    %jmp T_1.5;
+T_1.4 ;
+    %load/vec4 v0x634959b65980_0;
+    %pad/s 16;
+    %ret/vec4 0, 0, 16;  Assign to saturate16 (store_vec4_to_lval)
+T_1.5 ;
+T_1.3 ;
+    %end;
+    .scope S_0x634959b65400;
+T_2 ;
+    %wait E_0x634959b3ca70;
+    %load/vec4 v0x634959b67570_0;
+    %nor/r;
+    %flag_set/vec4 8;
+    %jmp/0xz  T_2.0, 8;
+    %pushi/vec4 0, 0, 16;
+    %assign/vec4 v0x634959b67070_0, 0;
+    %pushi/vec4 0, 0, 32;
+    %assign/vec4 v0x634959b668b0_0, 0;
+    %pushi/vec4 0, 0, 16;
+    %assign/vec4 v0x634959b66450_0, 0;
+    %pushi/vec4 0, 0, 1;
+    %assign/vec4 v0x634959b66ed0_0, 0;
+    %jmp T_2.1;
+T_2.0 ;
+    %pushi/vec4 0, 0, 1;
+    %assign/vec4 v0x634959b66ed0_0, 0;
+    %load/vec4 v0x634959b67310_0;
+    %flag_set/vec4 8;
+    %jmp/0xz  T_2.2, 8;
+    %load/vec4 v0x634959b668b0_0;
+    %load/vec4 v0x634959b66530_0;
+    %pad/s 32;
+    %add;
+    %assign/vec4 v0x634959b668b0_0, 0;
+    %load/vec4 v0x634959b66530_0;
+    %assign/vec4 v0x634959b67070_0, 0;
+    %alloc S_0x634959b65720;
+    %load/vec4 v0x634959b66f90_0;
+    %store/vec4 v0x634959b65980_0, 0, 32;
+    %callf/vec4 TD_tb_pidMotorControl.dut.saturate16, S_0x634959b65720;
+    %free S_0x634959b65720;
+    %assign/vec4 v0x634959b66450_0, 0;
+    %pushi/vec4 1, 0, 1;
+    %assign/vec4 v0x634959b66ed0_0, 0;
+T_2.2 ;
+T_2.1 ;
+    %jmp T_2;
+    .thread T_2;
+    .scope S_0x634959b2a240;
+T_3 ;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x634959b67da0_0, 0, 1;
+T_3.0 ;
+    %delay 18518, 0;
+    %load/vec4 v0x634959b67da0_0;
+    %inv;
+    %store/vec4 v0x634959b67da0_0, 0, 1;
+    %jmp T_3.0;
+    %end;
+    .thread T_3;
+    .scope S_0x634959b2a240;
+T_4 ;
+    %vpi_call/w 3 59 "$dumpfile", "sim/tb_pidMotorControl.vcd" {0 0 0};
+    %vpi_call/w 3 60 "$dumpvars", 32'sb00000000000000000000000000000000, S_0x634959b2a240 {0 0 0};
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x634959b67e70_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x634959b67c00_0, 0, 1;
+    %pushi/vec4 0, 0, 16;
+    %store/vec4 v0x634959b67cd0_0, 0, 16;
+    %pushi/vec4 0, 0, 16;
+    %store/vec4 v0x634959b67a90_0, 0, 16;
+    %pushi/vec4 0, 0, 16;
+    %store/vec4 v0x634959b679f0_0, 0, 16;
+    %pushi/vec4 0, 0, 16;
+    %store/vec4 v0x634959b67950_0, 0, 16;
+    %pushi/vec4 0, 0, 16;
+    %store/vec4 v0x634959b678b0_0, 0, 16;
+    %delay 200000, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x634959b67e70_0, 0, 1;
+    %pushi/vec4 256, 0, 16;
+    %store/vec4 v0x634959b679f0_0, 0, 16;
+    %pushi/vec4 64, 0, 16;
+    %store/vec4 v0x634959b67950_0, 0, 16;
+    %pushi/vec4 128, 0, 16;
+    %store/vec4 v0x634959b678b0_0, 0, 16;
+    %pushi/vec4 2560, 0, 16;
+    %store/vec4 v0x634959b67cd0_0, 0, 16;
+    %pushi/vec4 0, 0, 16;
+    %store/vec4 v0x634959b32aa0_0, 0, 16;
+    %fork TD_tb_pidMotorControl.applySample, S_0x634959b407f0;
+    %join;
+    %pushi/vec4 512, 0, 16;
+    %store/vec4 v0x634959b32aa0_0, 0, 16;
+    %fork TD_tb_pidMotorControl.applySample, S_0x634959b407f0;
+    %join;
+    %pushi/vec4 1280, 0, 16;
+    %store/vec4 v0x634959b32aa0_0, 0, 16;
+    %fork TD_tb_pidMotorControl.applySample, S_0x634959b407f0;
+    %join;
+    %pushi/vec4 2048, 0, 16;
+    %store/vec4 v0x634959b32aa0_0, 0, 16;
+    %fork TD_tb_pidMotorControl.applySample, S_0x634959b407f0;
+    %join;
+    %pushi/vec4 2304, 0, 16;
+    %store/vec4 v0x634959b32aa0_0, 0, 16;
+    %fork TD_tb_pidMotorControl.applySample, S_0x634959b407f0;
+    %join;
+    %pushi/vec4 2560, 0, 16;
+    %store/vec4 v0x634959b32aa0_0, 0, 16;
+    %fork TD_tb_pidMotorControl.applySample, S_0x634959b407f0;
+    %join;
+    %pushi/vec4 2816, 0, 16;
+    %store/vec4 v0x634959b32aa0_0, 0, 16;
+    %fork TD_tb_pidMotorControl.applySample, S_0x634959b407f0;
+    %join;
+    %pushi/vec4 32512, 0, 16;
+    %store/vec4 v0x634959b679f0_0, 0, 16;
+    %pushi/vec4 0, 0, 16;
+    %store/vec4 v0x634959b67950_0, 0, 16;
+    %pushi/vec4 0, 0, 16;
+    %store/vec4 v0x634959b678b0_0, 0, 16;
+    %pushi/vec4 32512, 0, 16;
+    %store/vec4 v0x634959b67cd0_0, 0, 16;
+    %pushi/vec4 33024, 0, 16;
+    %store/vec4 v0x634959b67a90_0, 0, 16;
+    %load/vec4 v0x634959b67a90_0;
+    %store/vec4 v0x634959b32aa0_0, 0, 16;
+    %fork TD_tb_pidMotorControl.applySample, S_0x634959b407f0;
+    %join;
+    %pushi/vec4 6, 0, 32;
+T_4.0 %dup/vec4;
+    %pushi/vec4 0, 0, 32;
+    %cmp/s;
+    %jmp/1xz T_4.1, 5;
+    %jmp/1 T_4.1, 4;
+    %pushi/vec4 1, 0, 32;
+    %sub;
+    %wait E_0x634959b36980;
+    %jmp T_4.0;
+T_4.1 ;
+    %pop/vec4 1;
+    %vpi_call/w 3 107 "$finish" {0 0 0};
+    %end;
+    .thread T_4;
+# The file index is used to find the file name in the following table.
+:file_names 5;
+    "N/A";
+    "<interactive>";
+    "-";
+    "sim/tb_pidMotorControl.sv";
+    "pidMotorControl/src/pidMotorControl.sv";

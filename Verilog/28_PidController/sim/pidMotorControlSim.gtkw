@@ -1,0 +1,60 @@
+[*]
+[*] GTKWave Analyzer v3.3.116 (w)1999-2023 BSI
+[*] Sat Jul 11 10:33:03 2026
+[*]
+[dumpfile] "/home/erayacikgz/Desktop/fpga/28_PidMotorControl/sim/tb_pidMotorControl.vcd"
+[dumpfile_mtime] "Sat Jul 11 10:29:36 2026"
+[dumpfile_size] 5069
+[savefile] "/home/erayacikgz/Desktop/fpga/28_PidMotorControl/sim/pidMotorControlSim.gtkw"
+[timestart] 0
+[size] 1920 993
+[pos] -91 -91
+*-17.215996 206200 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] tb_pidMotorControl.
+[sst_width] 276
+[signals_width] 375
+[sst_expanded] 1
+[sst_vpaned_height] 293
+@28
+tb_pidMotorControl.sampleEnable
+@22
+tb_pidMotorControl.setpoint[15:0]
++{tb_pidMotorControl.measuredValue[15:0]} tb_pidMotorControl.measuredValue[15:0]
+@200
+-
+@22
+tb_pidMotorControl.kp[15:0]
+tb_pidMotorControl.ki[15:0]
+tb_pidMotorControl.kd[15:0]
+@200
+-
+@22
+tb_pidMotorControl.dut.currentError[15:0]
+tb_pidMotorControl.dut.previousError[15:0]
+tb_pidMotorControl.dut.errorDelta[15:0]
+@200
+-
+@22
+tb_pidMotorControl.dut.integralAccumulator[31:0]
+@200
+-
+@22
+tb_pidMotorControl.dut.proportionalProduct[31:0]
+tb_pidMotorControl.dut.integralProduct[47:0]
+tb_pidMotorControl.dut.derivativeProduct[31:0]
+@200
+-
+@22
+tb_pidMotorControl.dut.proportionalTerm[31:0]
+tb_pidMotorControl.dut.integralTerm[31:0]
+tb_pidMotorControl.dut.derivativeTerm[31:0]
+@200
+-
+@22
+tb_pidMotorControl.dut.pidSum[31:0]
+@23
+tb_pidMotorControl.controlOutput[15:0]
+@28
+tb_pidMotorControl.outputValid
+[pattern_trace] 1
+[pattern_trace] 0

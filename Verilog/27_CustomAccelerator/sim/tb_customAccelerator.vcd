@@ -1,0 +1,573 @@
+$date
+	Sat Jul 11 13:14:54 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module tb_customAccelerator $end
+$var wire 32 ! readData [31:0] $end
+$var parameter 8 " ADDR_CONTROL $end
+$var parameter 8 # ADDR_INPUT_A $end
+$var parameter 8 $ ADDR_INPUT_B $end
+$var parameter 8 % ADDR_INPUT_C $end
+$var parameter 8 & ADDR_RESULT $end
+$var parameter 8 ' ADDR_STATUS $end
+$var reg 8 ( readAddress [7:0] $end
+$var reg 1 ) readEnable $end
+$var reg 1 * sys_clk $end
+$var reg 1 + sys_rst_n $end
+$var reg 8 , writeAddress [7:0] $end
+$var reg 32 - writeData [31:0] $end
+$var reg 1 . writeEnable $end
+$scope module dut $end
+$var wire 8 / readAddress [7:0] $end
+$var wire 1 ) readEnable $end
+$var wire 1 0 startPulse $end
+$var wire 1 * sys_clk $end
+$var wire 1 + sys_rst_n $end
+$var wire 8 1 writeAddress [7:0] $end
+$var wire 32 2 writeData [31:0] $end
+$var wire 1 . writeEnable $end
+$var wire 64 3 multiplyResult [63:0] $end
+$var wire 64 4 macResult [63:0] $end
+$var parameter 8 5 ADDR_CONTROL $end
+$var parameter 8 6 ADDR_INPUT_A $end
+$var parameter 8 7 ADDR_INPUT_B $end
+$var parameter 8 8 ADDR_INPUT_C $end
+$var parameter 8 9 ADDR_RESULT $end
+$var parameter 8 : ADDR_STATUS $end
+$var reg 32 ; controlReg [31:0] $end
+$var reg 32 < inputAReg [31:0] $end
+$var reg 32 = inputBReg [31:0] $end
+$var reg 32 > inputCReg [31:0] $end
+$var reg 32 ? readData [31:0] $end
+$var reg 32 @ resultReg [31:0] $end
+$var reg 2 A state [1:0] $end
+$var reg 32 B statusReg [31:0] $end
+$upscope $end
+$scope task checkResult $end
+$var reg 32 C expectedResult [31:0] $end
+$upscope $end
+$scope task readRegister $end
+$var reg 8 D address [7:0] $end
+$upscope $end
+$scope task runAccelerator $end
+$var reg 32 E expectedResult [31:0] $end
+$var reg 32 F inputA [31:0] $end
+$var reg 32 G inputB [31:0] $end
+$var reg 32 H inputC [31:0] $end
+$upscope $end
+$scope task waitForDone $end
+$upscope $end
+$scope task writeRegister $end
+$var reg 8 I address [7:0] $end
+$var reg 32 J data [31:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+b10100 :
+b10000 9
+b1100 8
+b1000 7
+b100 6
+b0 5
+b10100 '
+b10000 &
+b1100 %
+b1000 $
+b100 #
+b0 "
+$end
+#0
+$dumpvars
+bx J
+bx I
+bx H
+bx G
+bx F
+bx E
+bx D
+bx C
+b0 B
+b0 A
+b0 @
+b0 ?
+b0 >
+b0 =
+b0 <
+b0 ;
+b0 4
+b0 3
+b0 2
+b0 1
+00
+b0 /
+0.
+b0 -
+b0 ,
+0+
+0*
+0)
+b0 (
+b0 !
+$end
+#18518
+1*
+#37036
+0*
+#55554
+1*
+#74072
+0*
+#92590
+1*
+#111108
+0*
+#129626
+1*
+#148144
+0*
+#166662
+1*
+#185180
+0*
+#200000
+b11 J
+b100 I
+b10001 E
+b101 H
+b100 G
+b11 F
+1+
+#203698
+1*
+#222216
+1.
+b11 -
+b11 2
+b100 ,
+b100 1
+0*
+#240734
+b11 <
+1*
+#259252
+b100 J
+b1000 I
+b0 -
+b0 2
+b0 ,
+b0 1
+0.
+0*
+#277770
+1*
+#296288
+1.
+b100 -
+b100 2
+b1000 ,
+b1000 1
+0*
+#314806
+b1100 4
+b1100 3
+b100 =
+1*
+#333324
+b101 J
+b1100 I
+b0 -
+b0 2
+b0 ,
+b0 1
+0.
+0*
+#351842
+1*
+#370360
+1.
+b101 -
+b101 2
+b1100 ,
+b1100 1
+0*
+#388878
+b10001 4
+b101 >
+1*
+#407396
+b1 J
+b0 I
+b0 -
+b0 2
+b0 ,
+b0 1
+0.
+0*
+#425914
+1*
+#444432
+10
+1.
+b1 -
+b1 2
+0*
+#462950
+b1 A
+b10 B
+b0 ;
+1*
+#481468
+00
+b10100 D
+b0 -
+b0 2
+0.
+0*
+#499986
+b10 A
+b10001 @
+1*
+#518504
+b10 !
+b10 ?
+1)
+b10100 (
+b10100 /
+0*
+#537022
+b1 !
+b1 ?
+b0 A
+b1 B
+1*
+#555540
+b0 !
+b0 ?
+b10000 D
+b10001 C
+b0 (
+b0 /
+0)
+0*
+#574058
+1*
+#592576
+b10001 !
+b10001 ?
+1)
+b10000 (
+b10000 /
+0*
+#611094
+1*
+#629612
+b0 !
+b0 ?
+b1010 J
+b100 I
+b11001111 E
+b111 H
+b10100 G
+b1010 F
+b0 (
+b0 /
+0)
+0*
+#648130
+1*
+#666648
+1.
+b1010 -
+b1010 2
+b100 ,
+b100 1
+0*
+#685166
+b101101 4
+b101000 3
+b1010 <
+1*
+#703684
+b10100 J
+b1000 I
+b0 -
+b0 2
+b0 ,
+b0 1
+0.
+0*
+#722202
+1*
+#740720
+1.
+b10100 -
+b10100 2
+b1000 ,
+b1000 1
+0*
+#759238
+b11001101 4
+b11001000 3
+b10100 =
+1*
+#777756
+b111 J
+b1100 I
+b0 -
+b0 2
+b0 ,
+b0 1
+0.
+0*
+#796274
+1*
+#814792
+1.
+b111 -
+b111 2
+b1100 ,
+b1100 1
+0*
+#833310
+b11001111 4
+b111 >
+1*
+#851828
+b1 J
+b0 I
+b0 -
+b0 2
+b0 ,
+b0 1
+0.
+0*
+#870346
+1*
+#888864
+10
+1.
+b1 -
+b1 2
+0*
+#907382
+b1 A
+b10 B
+b0 ;
+1*
+#925900
+00
+b10100 D
+b0 -
+b0 2
+0.
+0*
+#944418
+b10 A
+b11001111 @
+1*
+#962936
+b10 !
+b10 ?
+1)
+b10100 (
+b10100 /
+0*
+#981454
+b1 !
+b1 ?
+b0 A
+b1 B
+1*
+#999972
+b0 !
+b0 ?
+b10000 D
+b11001111 C
+b0 (
+b0 /
+0)
+0*
+#1018490
+1*
+#1037008
+b11001111 !
+b11001111 ?
+1)
+b10000 (
+b10000 /
+0*
+#1055526
+1*
+#1074044
+b0 !
+b0 ?
+b11111111 J
+b100 I
+b111111111 E
+b1 H
+b10 G
+b11111111 F
+b0 (
+b0 /
+0)
+0*
+#1092562
+1*
+#1111080
+1.
+b11111111 -
+b11111111 2
+b100 ,
+b100 1
+0*
+#1129598
+b1001111110011 4
+b1001111101100 3
+b11111111 <
+1*
+#1148116
+b10 J
+b1000 I
+b0 -
+b0 2
+b0 ,
+b0 1
+0.
+0*
+#1166634
+1*
+#1185152
+1.
+b10 -
+b10 2
+b1000 ,
+b1000 1
+0*
+#1203670
+b1000000101 4
+b111111110 3
+b10 =
+1*
+#1222188
+b1 J
+b1100 I
+b0 -
+b0 2
+b0 ,
+b0 1
+0.
+0*
+#1240706
+1*
+#1259224
+1.
+b1 -
+b1 2
+b1100 ,
+b1100 1
+0*
+#1277742
+b111111111 4
+b1 >
+1*
+#1296260
+b0 I
+b0 -
+b0 2
+b0 ,
+b0 1
+0.
+0*
+#1314778
+1*
+#1333296
+10
+1.
+b1 -
+b1 2
+0*
+#1351814
+b1 A
+b10 B
+b0 ;
+1*
+#1370332
+00
+b10100 D
+b0 -
+b0 2
+0.
+0*
+#1388850
+b10 A
+b111111111 @
+1*
+#1407368
+b10 !
+b10 ?
+1)
+b10100 (
+b10100 /
+0*
+#1425886
+b1 !
+b1 ?
+b0 A
+b1 B
+1*
+#1444404
+b0 !
+b0 ?
+b10000 D
+b111111111 C
+b0 (
+b0 /
+0)
+0*
+#1462922
+1*
+#1481440
+b111111111 !
+b111111111 ?
+1)
+b10000 (
+b10000 /
+0*
+#1499958
+1*
+#1518476
+b0 !
+b0 ?
+b0 (
+b0 /
+0)
+0*
+#1536994
+1*
+#1555512
+0*
+#1574030
+1*
+#1592548
+0*
+#1611066
+1*
+#1629584
+0*
+#1648102
+1*
+#1666620
+0*
+#1685138
+1*
+#1703656
+0*
+#1722174
+1*

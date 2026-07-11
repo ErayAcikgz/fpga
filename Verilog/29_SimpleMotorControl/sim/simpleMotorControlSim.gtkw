@@ -1,0 +1,47 @@
+[*]
+[*] GTKWave Analyzer v3.3.116 (w)1999-2023 BSI
+[*] Sat Jul 11 10:50:01 2026
+[*]
+[dumpfile] "/home/erayacikgz/Desktop/fpga/29_SimpleMotorControl/sim/tb_simpleMotorControl.vcd"
+[dumpfile_mtime] "Sat Jul 11 10:46:31 2026"
+[dumpfile_size] 217228
+[savefile] "/home/erayacikgz/Desktop/fpga/29_SimpleMotorControl/sim/simpleMotorControlSim.gtkw"
+[timestart] 22817000
+[size] 1920 993
+[pos] -91 -91
+*-18.953287 23536378 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] tb_simpleMotorControl.
+[sst_width] 276
+[signals_width] 421
+[sst_expanded] 1
+[sst_vpaned_height] 293
+@28
+tb_simpleMotorControl.sampleEnable
+@200
+-
+@22
+tb_simpleMotorControl.setpoint[15:0]
+tb_simpleMotorControl.measuredPosition[15:0]
+tb_simpleMotorControl.controlOutput[15:0]
+@28
+tb_simpleMotorControl.outputValid
+@200
+-
+@22
+tb_simpleMotorControl.pidController.currentError[15:0]
+tb_simpleMotorControl.pidController.previousError[15:0]
+tb_simpleMotorControl.pidController.errorDelta[15:0]
+tb_simpleMotorControl.pidController.integralAccumulator[31:0]
+tb_simpleMotorControl.pidController.proportionalTerm[31:0]
+tb_simpleMotorControl.pidController.integralTerm[31:0]
+tb_simpleMotorControl.pidController.derivativeTerm[31:0]
+tb_simpleMotorControl.pidController.pidSum[31:0]
+@200
+-
+@22
+tb_simpleMotorControl.motorModel.position[31:0]
+tb_simpleMotorControl.motorModel.velocity[31:0]
+tb_simpleMotorControl.motorModel.acceleration[31:0]
+tb_simpleMotorControl.motorModel.damping[31:0]
+[pattern_trace] 1
+[pattern_trace] 0

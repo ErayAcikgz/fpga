@@ -1,0 +1,50 @@
+[*]
+[*] GTKWave Analyzer v3.3.116 (w)1999-2023 BSI
+[*] Sat Jul 11 10:20:08 2026
+[*]
+[dumpfile] "/home/erayacikgz/Desktop/fpga/27_CustomAccelerator/sim/tb_customAccelerator.vcd"
+[dumpfile_mtime] "Sat Jul 11 10:14:54 2026"
+[dumpfile_size] 5090
+[savefile] "/home/erayacikgz/Desktop/fpga/27_CustomAccelerator/sim/customAcceleratorSim.gtkw"
+[timestart] 0
+[size] 1920 993
+[pos] -91 -91
+*-17.920864 27000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] tb_customAccelerator.
+[sst_width] 276
+[signals_width] 395
+[sst_expanded] 1
+[sst_vpaned_height] 293
+@28
+tb_customAccelerator.writeEnable
+@22
+tb_customAccelerator.writeAddress[7:0]
+tb_customAccelerator.writeData[31:0]
+@200
+-
+@28
+tb_customAccelerator.readEnable
+@22
+tb_customAccelerator.readAddress[7:0]
+tb_customAccelerator.readData[31:0]
+@200
+-
+@28
+tb_customAccelerator.dut.state[1:0]
+tb_customAccelerator.dut.startPulse
+@200
+-
+@22
+tb_customAccelerator.dut.controlReg[31:0]
+tb_customAccelerator.dut.inputAReg[31:0]
+tb_customAccelerator.dut.inputBReg[31:0]
+tb_customAccelerator.dut.inputCReg[31:0]
+tb_customAccelerator.dut.resultReg[31:0]
+tb_customAccelerator.dut.statusReg[31:0]
+@200
+-
+@22
+tb_customAccelerator.dut.multiplyResult[63:0]
+tb_customAccelerator.dut.macResult[63:0]
+[pattern_trace] 1
+[pattern_trace] 0

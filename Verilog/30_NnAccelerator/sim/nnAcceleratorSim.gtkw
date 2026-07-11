@@ -1,0 +1,64 @@
+[*]
+[*] GTKWave Analyzer v3.3.116 (w)1999-2023 BSI
+[*] Sat Jul 11 11:20:04 2026
+[*]
+[dumpfile] "/home/erayacikgz/Desktop/fpga/30_NnAccelerator/sim/tb_nnAccelerator.vcd"
+[dumpfile_mtime] "Sat Jul 11 11:18:27 2026"
+[dumpfile_size] 18066
+[savefile] "/home/erayacikgz/Desktop/fpga/30_NnAccelerator/sim/nnAcceleratorSim.gtkw"
+[timestart] 0
+[size] 1920 993
+[pos] -131 -131
+*-19.733292 762000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] tb_nnAccelerator.
+[sst_width] 276
+[signals_width] 220
+[sst_expanded] 1
+[sst_vpaned_height] 293
+@28
+tb_nnAccelerator.writeEnable
+@22
+tb_nnAccelerator.writeAddress[7:0]
+tb_nnAccelerator.writeData[31:0]
+@200
+-
+@28
+tb_nnAccelerator.readEnable
+@22
+tb_nnAccelerator.readAddress[7:0]
+tb_nnAccelerator.readData[31:0]
+@200
+-
+@28
+tb_nnAccelerator.dut.state[1:0]
+tb_nnAccelerator.dut.startPulse
+@22
+tb_nnAccelerator.dut.statusReg[31:0]
+tb_nnAccelerator.dut.controlReg[31:0]
+@200
+-
+@28
+tb_nnAccelerator.dut.row[1:0]
+tb_nnAccelerator.dut.col[1:0]
+@22
+tb_nnAccelerator.dut.currentInput[7:0]
+tb_nnAccelerator.dut.currentWeight[7:0]
+tb_nnAccelerator.dut.rawProduct[15:0]
+tb_nnAccelerator.dut.scaledProduct[31:0]
+@200
+-
+@22
+tb_nnAccelerator.dut.acc0[31:0]
+tb_nnAccelerator.dut.acc1[31:0]
+tb_nnAccelerator.dut.acc2[31:0]
+tb_nnAccelerator.dut.acc3[31:0]
+@200
+-
+@22
+tb_nnAccelerator.dut.y0[15:0]
+tb_nnAccelerator.dut.y1[15:0]
+tb_nnAccelerator.dut.y2[15:0]
+@23
+tb_nnAccelerator.dut.y3[15:0]
+[pattern_trace] 1
+[pattern_trace] 0
